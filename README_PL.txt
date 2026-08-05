@@ -1,13 +1,12 @@
-ATLAS PWA - ETAP 7 v0.7
+ATLAS PWA - ETAP 8 v0.8
 
 NOWOŚCI:
-- ekran Dzisiaj z paskiem 168 dni
-- checklista posiłków, aktywności, suplementów, wody i kroków
-- automatyczny procent wykonania dnia
-- raport tygodniowy: masa, pas, aktywności, sen, kroki i woda
-- pole obwodu pasa w dzisiejszym wpisie
-- legenda ciężarów w zakładce Trening
+- zakładka Postępy
+- pełne pomiary raz w tygodniu, tylko w niedzielę
+- pomiary: masa, pas, klatka, ramię i udo
+- wykres masy i pasa (ostatnie 12 pomiarów)
+- historia oraz usuwanie błędnych pomiarów
+- zapis wagi i pasa trafia również do dziennika
 
 AKTUALIZACJA:
-Wgraj wszystkie pliki z tego folderu do głównego katalogu repozytorium GitHub atlas-pwa i zatwierdź Commit changes.
-Dane poprzednich wersji pozostają w pamięci urządzenia.
+Wgraj całą zawartość folderu atlas_stage8 do głównego katalogu repozytorium atlas-pwa i zatwierdź Commit changes. Po 2-3 minutach zamknij aplikację na telefonie i uruchom ponownie. Dane z v0.7 pozostają zapisane.
