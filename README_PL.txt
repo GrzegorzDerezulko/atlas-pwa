@@ -1,5 +1,11 @@
-ATLAS PWA v1.6 - synchronizacja z ATLAS Sync Android
+ATLAS PWA v1.7 - import pliku ATLAS Sync
 
-Po aktualizacji plików na GitHub Pages otwórz ATLAS Sync, zsynchronizuj Health Connect i kliknij „Wyślij dane do ATLAS PWA”. PWA otworzy się i automatycznie zapisze kroki, kalorie aktywne, sen, tętno oraz dzisiejsze aktywności.
+Aktualizacja GitHub:
+1. Wgraj wszystkie pliki z tego folderu do repozytorium atlas-pwa.
+2. Zatwierdź Commit changes.
+3. Poczekaj 2-3 minuty i uruchom aplikację ponownie.
 
-Dane pozostają lokalnie na telefonie. Nie są wysyłane na zewnętrzny serwer.
+Import:
+1. W aplikacji Android ATLAS Sync wyeksportuj plik JSON.
+2. W PWA wejdź w Xiaomi Watch S3.
+3. Wybierz plik ATLAS Sync i kliknij Importuj plik ATLAS Sync.
