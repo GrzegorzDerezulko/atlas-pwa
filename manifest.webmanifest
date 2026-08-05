@@ -1,7 +1,7 @@
 {
   "name": "ATLAS - Transformacja sylwetki",
   "short_name": "ATLAS",
-  "description": "Osobisty plan diety i dziennik transformacji sylwetki",
+  "description": "ATLAS - dieta, lista zakupów i dziennik transformacji sylwetki",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

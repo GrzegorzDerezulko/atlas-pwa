@@ -1,21 +1,16 @@
-ATLAS PWA - ETAP 2 v0.2
+ATLAS PWA - ETAP 3 v0.3
 
-NOWOŚCI:
-- pełny jadłospis na 14 dni, po 5 posiłków dziennie,
-- składniki i przygotowanie krok po kroku,
-- odhaczanie zjedzonych posiłków,
-- automatyczne liczenie zjedzonych kalorii i białka,
-- cele kalorii i białka w Ustawieniach,
-- zachowanie danych z wersji v0.1.
+NOWOŚĆ: automatyczna lista zakupów.
+- wybór zakresu dni 1-14
+- sumowanie takich samych produktów
+- wskazanie dni użycia produktu
+- odhaczanie zakupów
+- zachowanie danych ze starszych wersji
 
-AKTUALIZACJA NA GITHUB:
+AKTUALIZACJA GITHUB:
 1. Rozpakuj ZIP.
-2. Otwórz repozytorium atlas-pwa.
-3. Kliknij Add file -> Upload files.
-4. Wgraj WSZYSTKIE pliki ze środka folderu atlas_stage2.
-5. Potwierdź nadpisanie index.html, manifest.webmanifest i service-worker.js.
-6. Kliknij Commit changes.
-7. Poczekaj 1-3 minuty i odśwież aplikację.
-8. Jeśli telefon pokazuje starą wersję, zamknij ATLAS całkowicie i uruchom ponownie.
-
-Dane z Etapu 1 pozostaną na urządzeniu, ponieważ używany jest ten sam klucz pamięci.
+2. W repozytorium atlas-pwa wybierz Add file -> Upload files.
+3. Wgraj zawartość folderu atlas_stage3 i zatwierdź Commit changes.
+4. Poczekaj 1-3 minuty.
+5. Zamknij aplikację na telefonie i uruchom ponownie.
+6. Gdy nadal widać starą wersję, otwórz adres w Chrome i odśwież stronę.
