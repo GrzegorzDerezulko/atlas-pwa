@@ -241,6 +241,42 @@ q('refreshAnalysis').onclick=()=>renderAnalysis();q('analysisPeriod').onchange=(
 q('clearXiaomiPreview').onclick=()=>{xiaomiParsed=[];q('xiaomiFile').value='';q('xiaomiPreview').innerHTML='<div class="empty">Nie wybrano jeszcze pliku.</div>'};
 q('importXiaomi').onclick=()=>{if(!xiaomiParsed.length)return toast('Najpierw wybierz poprawny plik Mi Fitness');const overwrite=q('xiaomiMode').value==='overwrite';let changed=0;for(const r of xiaomiParsed){let i=state.entries.findIndex(x=>x.date===r.date);const patch={date:r.date};if(r.steps!==null)patch.steps=r.steps;if(r.sleep!==null)patch.sleep=r.sleep;if(r.calories!==null)patch.watchCalories=r.calories;if(r.heartRate!==null)patch.heartRate=r.heartRate;if(r.distance!==null)patch.distance=r.distance;if(r.activeMinutes!==null)patch.activeMinutes=r.activeMinutes;if(i>=0){const old=state.entries[i];state.entries[i]=overwrite?{...old,...patch}:{...patch,...old,date:r.date};if(!overwrite){for(const [k,v] of Object.entries(patch))if(k!=='date'&&(old[k]===undefined||old[k]===''))state.entries[i][k]=v}}else state.entries.push(patch);changed++}state.xiaomi={lastSync:new Date().toISOString(),lastFile:q('xiaomiFile').files?.[0]?.name||'Mi Fitness',records:changed};save();renderXiaomi();toast(`Zaimportowano ${changed} rekordów z Mi Fitness`)};
 
+
+function decodeBase64UrlUtf8(value){
+ try{const normalized=value.replace(/-/g,'+').replace(/_/g,'/');const padded=normalized+'='.repeat((4-normalized.length%4)%4);const binary=atob(padded);const bytes=Uint8Array.from(binary,c=>c.charCodeAt(0));return new TextDecoder().decode(bytes)}catch(e){console.error(e);return null}
+}
+function activityKindFromSync(a){const n=String(a.name||'').toLowerCase();if(n.includes('góra')||n.includes('dół')||n.includes('siłow'))return 'strength';if(n.includes('cardio')||n.includes('bież'))return 'cardio';return 'walk'}
+function importAtlasSyncPayload(payload){
+ if(!payload||Number(payload.atlasSyncVersion)!==1||!Array.isArray(payload.days))throw new Error('Nieobsługiwana wersja danych');
+ let daysChanged=0,activitiesChanged=0;
+ state.entries=state.entries||[];state.trainingLogs=state.trainingLogs||[];
+ for(const day of payload.days){
+  if(!day||!/^20\d\d-\d\d-\d\d$/.test(String(day.date||'')))continue;
+  const patch={date:day.date,atlasSyncAt:payload.syncedAt||new Date().toISOString()};
+  if(Number.isFinite(Number(day.steps)))patch.steps=Number(day.steps);
+  if(Number.isFinite(Number(day.activeCalories)))patch.watchCalories=Number(Number(day.activeCalories).toFixed(1));
+  if(Number.isFinite(Number(day.sleepMinutes)))patch.sleep=Number((Number(day.sleepMinutes)/60).toFixed(2));
+  if(day.sleepStart)patch.sleepStart=day.sleepStart;if(day.sleepEnd)patch.sleepEnd=day.sleepEnd;
+  if(Number.isFinite(Number(day.heartRate)))patch.heartRate=Number(day.heartRate);
+  if(Number.isFinite(Number(day.heartRateAvg)))patch.heartRateAvg=Number(day.heartRateAvg);
+  if(Number.isFinite(Number(day.heartRateMin)))patch.heartRateMin=Number(day.heartRateMin);
+  if(Number.isFinite(Number(day.heartRateMax)))patch.heartRateMax=Number(day.heartRateMax);
+  if(Number.isFinite(Number(day.restingHeartRate)))patch.restingHeartRate=Number(day.restingHeartRate);
+  const i=state.entries.findIndex(x=>x.date===day.date);if(i>=0)state.entries[i]={...state.entries[i],...patch};else state.entries.push(patch);daysChanged++;
+  for(const a of (Array.isArray(day.activities)?day.activities:[])){
+   const syncId=String(a.syncId||'');if(!syncId||state.trainingLogs.some(x=>x.syncId===syncId))continue;
+   state.trainingLogs.push({id:Date.now()+activitiesChanged,syncId,date:day.date,kind:activityKindFromSync(a),name:a.name||'Aktywność z zegarka',duration:Number(a.durationMinutes)||0,calories:Number(a.calories)||0,avgHeartRate:Number(a.avgHeartRate)||'',maxHeartRate:Number(a.maxHeartRate)||'',watchMode:a.watchMode||'',additional:!!a.additional,source:'ATLAS Sync / Health Connect',syncedAt:payload.syncedAt||new Date().toISOString()});activitiesChanged++;
+  }
+ }
+ state.xiaomi={...(state.xiaomi||{}),lastSync:payload.syncedAt||new Date().toISOString(),lastFile:'ATLAS Sync Android',records:daysChanged};
+ localStorage.setItem(KEY,JSON.stringify(state));
+ return `Synchronizacja zakończona: ${daysChanged} dzień, ${activitiesChanged} aktywności`;
+}
+function consumeAtlasSyncHash(){
+ const m=location.hash.match(/(?:^#|&)atlasSync=([^&]+)/);if(!m)return null;
+ try{const text=decodeBase64UrlUtf8(m[1]);if(!text)throw new Error('Nie udało się odczytać danych');const msg=importAtlasSyncPayload(JSON.parse(text));history.replaceState(null,'',location.pathname+location.search);return msg}catch(e){console.error(e);history.replaceState(null,'',location.pathname+location.search);return 'Błąd synchronizacji z ATLAS Sync'}
+}
+
 document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===name));if(name==='diet')renderDiet();if(name==='shopping')renderShopping();if(name==='training')renderTraining();if(name==='progress')renderProgress();if(name==='analysis')renderAnalysis();if(name==='coach')renderCoach();if(name==='photos')renderPhotos();if(name==='xiaomi')renderXiaomi();window.scrollTo({top:0,behavior:'smooth'})}
 function programDay(){return programInfoForDate(localDateValue()).day}function currentDietDay(){return ((programDay()-1)%14)+1}function checkKey(day,i){return `d${day}m${i}`}
 function entryForDate(ds){return state.entries.find(e=>e.date===ds)}
@@ -419,5 +455,5 @@ q('saveSettings').onclick=()=>{state.settings={startWeight:Number(q('startWeight
 q('exportData').onclick=()=>{const blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='atlas-kopia-'+new Date().toISOString().slice(0,10)+'.json';a.click();URL.revokeObjectURL(a.href)};q('importData').onchange=async ev=>{try{const data=JSON.parse(await ev.target.files[0].text());state={...defaults,...data,settings:{...defaults.settings,...(data.settings||{})},mealChecks:data.mealChecks||{},shoppingChecks:data.shoppingChecks||{},shoppingRange:data.shoppingRange||{from:1,to:7},trainingLogs:data.trainingLogs||[],dailyChecks:data.dailyChecks||{},measurements:data.measurements||[],photos:data.photos||[],xiaomi:data.xiaomi||{lastSync:null,lastFile:null,records:0}};save();toast('Kopia zaimportowana')}catch{toast('Nieprawidłowy plik kopii')}};q('resetData').onclick=()=>{if(confirm('Usunąć wszystkie dane ATLAS z tego urządzenia?')){state=structuredClone(defaults);save();toast('Dane usunięte')}};
 q('saveMeasurement').onclick=()=>{const m={date:q('measurementDate').value,weight:q('measurementWeight').value,waist:q('measurementWaist').value,chest:q('measurementChest').value,arm:q('measurementArm').value,thigh:q('measurementThigh').value};if(!m.date)return toast('Wybierz datę');if(!isSunday(m.date))return toast('Pełne pomiary zapisujemy w niedzielę');if(!m.weight&&!m.waist)return toast('Wpisz przynajmniej wagę lub pas');const i=state.measurements.findIndex(x=>x.date===m.date);if(i>=0)state.measurements[i]=m;else state.measurements.push(m);const ei=state.entries.findIndex(x=>x.date===m.date);const daily={date:m.date,weight:m.weight,waist:m.waist};if(ei>=0)state.entries[ei]={...state.entries[ei],...daily};else state.entries.push(daily);save();toast('Pomiar niedzielny zapisany')};
 q('clearMeasurement').onclick=()=>['measurementWeight','measurementWaist','measurementChest','measurementArm','measurementThigh'].forEach(id=>q(id).value='');
-function setOnline(){q('onlineState').textContent=navigator.onLine?'● Online':'● Offline';q('onlineState').style.color=navigator.onLine?'var(--accent)':'#ffb36b'}window.addEventListener('online',setOnline);window.addEventListener('offline',setOnline);setOnline();window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e;q('installNotice').classList.remove('hidden')});q('installBtn').onclick=async()=>{if(!deferredPrompt)return;deferredPrompt.prompt();await deferredPrompt.userChoice;deferredPrompt=null;q('installNotice').classList.add('hidden')};if('serviceWorker'in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('./service-worker.js'));render();
+function setOnline(){q('onlineState').textContent=navigator.onLine?'● Online':'● Offline';q('onlineState').style.color=navigator.onLine?'var(--accent)':'#ffb36b'}window.addEventListener('online',setOnline);window.addEventListener('offline',setOnline);setOnline();window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e;q('installNotice').classList.remove('hidden')});q('installBtn').onclick=async()=>{if(!deferredPrompt)return;deferredPrompt.prompt();await deferredPrompt.userChoice;deferredPrompt=null;q('installNotice').classList.add('hidden')};if('serviceWorker'in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('./service-worker.js'));const atlasSyncMessage=consumeAtlasSyncHash();render();if(atlasSyncMessage)setTimeout(()=>toast(atlasSyncMessage),250);
 </script></body></html>

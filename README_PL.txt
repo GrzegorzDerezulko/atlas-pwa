@@ -1,17 +1,5 @@
-PROJEKT ATLAS PWA - ETAP 15 KUCHNIA v1.5
+ATLAS PWA v1.6 - synchronizacja z ATLAS Sync Android
 
-Nowosci:
-- nowa zakladka Kuchnia,
-- wyszukiwarka potraw i skladnikow,
-- przepisy dla 14 dni,
-- skladniki z odhaczaniem,
-- przygotowanie krok po kroku,
-- przeliczanie porcji,
-- minutnik kuchenny,
-- oznaczanie posilku jako zjedzonego i aktualizacja kalorii/bialka.
+Po aktualizacji plików na GitHub Pages otwórz ATLAS Sync, zsynchronizuj Health Connect i kliknij „Wyślij dane do ATLAS PWA”. PWA otworzy się i automatycznie zapisze kroki, kalorie aktywne, sen, tętno oraz dzisiejsze aktywności.
 
-AKTUALIZACJA GITHUB:
-1. Wgraj wszystkie pliki z tego folderu do glownego katalogu repozytorium atlas-pwa.
-2. Zatwierdz Commit changes.
-3. Poczekaj kilka minut.
-4. Zamknij i ponownie uruchom ATLAS.
+Dane pozostają lokalnie na telefonie. Nie są wysyłane na zewnętrzny serwer.
