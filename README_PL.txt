@@ -1,17 +1,17 @@
-ATLAS PWA v1.4 - ETAP 13: TRENER AI
+PROJEKT ATLAS PWA - ETAP 15 KUCHNIA v1.5
 
-Nowości:
-- lokalny Trener AI bez wysyłania danych do internetu,
-- ocena ostatnich 7 dni w skali 0-100%,
-- trzy najważniejsze priorytety,
-- wskazówki dotyczące snu, kroków, nawodnienia, diety i treningów,
-- analiza trendu masy i pasa,
-- krótka wskazówka Trenera AI na Dashboardzie.
+Nowosci:
+- nowa zakladka Kuchnia,
+- wyszukiwarka potraw i skladnikow,
+- przepisy dla 14 dni,
+- skladniki z odhaczaniem,
+- przygotowanie krok po kroku,
+- przeliczanie porcji,
+- minutnik kuchenny,
+- oznaczanie posilku jako zjedzonego i aktualizacja kalorii/bialka.
 
-Aktualizacja GitHub:
-1. Wgraj wszystkie pliki z tego folderu do głównego katalogu repozytorium atlas-pwa.
-2. Zatwierdź Commit changes.
-3. Poczekaj 2-3 minuty.
-4. Zamknij aplikację na telefonie i uruchom ponownie.
-
-Dane pozostają lokalnie na urządzeniu. Wskazówki nie zastępują konsultacji medycznej.
+AKTUALIZACJA GITHUB:
+1. Wgraj wszystkie pliki z tego folderu do glownego katalogu repozytorium atlas-pwa.
+2. Zatwierdz Commit changes.
+3. Poczekaj kilka minut.
+4. Zamknij i ponownie uruchom ATLAS.
