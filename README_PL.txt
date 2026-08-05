@@ -28,3 +28,9 @@ WERSJA 2.1 - POPRAWKA CENTRUM SYNCHRONIZACJI
 - Importuje pliki atlas_sync_YYYY-MM-DD.json z ATLAS Sync Android.
 - Po wybraniu pliku pokazuje podgląd i przycisk "Importuj do ATLAS".
 - Naprawiono inicjalizację modułu synchronizacji, która wcześniej była osadzona wewnątrz funkcji zmiany widoku.
+
+
+ATLAS PWA 2.1.1
+- poprawiono odczyt plikow JSON z BOM, UTF-16 i dodatkowymi znakami
+- dodano szczegolowy komunikat diagnostyczny importu
+- zmieniono cache PWA, aby wymusic aktualizacje na telefonie

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#0b1220"><meta name="description" content="ATLAS - dieta i dziennik transformacji sylwetki">
-<link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icons/icon-192.png"><title>ATLAS PWA 2.1</title>
+<link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icons/icon-192.png"><title>ATLAS PWA 2.1.1</title>
 <style>
 :root{--bg:#07101d;--panel:#0d1828;--panel2:#111f33;--text:#f5f7fb;--muted:#9fb0c6;--accent:#63d19e;--accent2:#5aa8ff;--danger:#ff6b6b;--border:#22344c;--shadow:0 12px 30px rgba(0,0,0,.28)}
 *{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}body{min-height:100vh}.app{display:grid;grid-template-columns:250px 1fr;min-height:100vh}.sidebar{background:#081321;border-right:1px solid var(--border);padding:24px 16px;position:sticky;top:0;height:100vh}.brand{display:flex;gap:12px;align-items:center;margin-bottom:28px}.logo{width:44px;height:44px;border-radius:14px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;font-size:24px;box-shadow:var(--shadow)}.brand h1{font-size:20px;margin:0}.brand small{color:var(--muted)}.nav{display:grid;gap:8px}.nav button{border:0;background:transparent;color:var(--muted);padding:13px 14px;border-radius:12px;text-align:left;font-size:15px;cursor:pointer}.nav button.active,.nav button:hover{background:var(--panel2);color:var(--text)}.content{padding:28px;max-width:1200px;width:100%;margin:0 auto}.topbar{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:24px}.topbar h2{margin:0;font-size:28px}.status{color:var(--muted);font-size:14px}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.card{background:linear-gradient(180deg,var(--panel),#0a1524);border:1px solid var(--border);border-radius:18px;padding:18px;box-shadow:var(--shadow);margin-bottom:16px}.metric .label{color:var(--muted);font-size:13px}.metric .value{font-size:28px;font-weight:800;margin-top:8px}.metric .sub{font-size:12px;color:var(--muted);margin-top:6px}.wide{grid-column:span 2}.full{grid-column:1/-1}.progress{height:10px;background:#18283c;border-radius:999px;overflow:hidden;margin-top:12px}.progress span{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));width:0;transition:.25s}.section-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}.section-title h3{margin:0;font-size:18px}.quick{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.quick button,.primary,.secondary{border:0;border-radius:12px;padding:12px 14px;font-weight:700;cursor:pointer}.quick button,.primary{background:var(--accent);color:#052015}.secondary{background:#16263b;color:var(--text);border:1px solid var(--border)}.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.field{display:grid;gap:6px}.field label{font-size:13px;color:var(--muted)}.field input,.field select{width:100%;background:#081421;color:var(--text);border:1px solid var(--border);border-radius:10px;padding:11px 12px;font-size:15px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.hidden{display:none!important}.empty{color:var(--muted);padding:20px 0}.mobilebar{display:none}.notice{padding:12px 14px;border-radius:12px;background:#10243a;border:1px solid #244766;color:#cde6ff;margin-bottom:16px}.toast{position:fixed;right:18px;bottom:18px;background:#12243a;color:#fff;padding:12px 16px;border:1px solid var(--border);border-radius:12px;opacity:0;transform:translateY(12px);transition:.25s;pointer-events:none;z-index:99}.toast.show{opacity:1;transform:none}
@@ -38,7 +38,7 @@
 
 .kitchen-toolbar{display:grid;grid-template-columns:1fr 180px;gap:12px;align-items:end}.kitchen-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.recipe-card{background:#091725;border:1px solid var(--border);border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:12px}.recipe-card h3{margin:0;font-size:18px}.recipe-meta{display:flex;gap:8px;flex-wrap:wrap}.recipe-chip{background:#13263a;border:1px solid #244766;color:#d6e9ff;border-radius:999px;padding:5px 9px;font-size:12px;font-weight:700}.recipe-card .actions{margin-top:auto}.kitchen-modal{position:fixed;inset:0;background:rgba(2,8,15,.84);z-index:120;display:grid;place-items:center;padding:18px}.kitchen-dialog{width:min(760px,100%);max-height:92vh;overflow:auto;background:#0a1524;border:1px solid var(--border);border-radius:20px;box-shadow:var(--shadow);padding:20px}.kitchen-dialog-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.kitchen-dialog-head h2{margin:0}.icon-btn{border:1px solid var(--border);background:#14243a;color:var(--text);border-radius:10px;padding:8px 11px;cursor:pointer}.ingredient-checks,.step-list{display:grid;gap:9px}.ingredient-row,.cook-step{background:#081421;border:1px solid var(--border);border-radius:12px;padding:12px}.ingredient-row{display:flex;gap:10px;align-items:flex-start}.ingredient-row.done{opacity:.55;text-decoration:line-through}.cook-step{display:none}.cook-step.active{display:block}.cook-step-number{color:var(--accent);font-size:12px;font-weight:800;margin-bottom:6px}.timer-box{display:flex;gap:12px;align-items:center;justify-content:space-between;background:#0c2031;border:1px solid #244766;border-radius:14px;padding:14px;margin-top:14px}.timer-display{font-size:30px;font-weight:900;letter-spacing:1px}.timer-controls{display:flex;gap:8px;flex-wrap:wrap}.kitchen-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.kitchen-summary div{background:#091725;border:1px solid var(--border);border-radius:12px;padding:12px}.kitchen-summary span{display:block;color:var(--muted);font-size:12px}.kitchen-summary b{display:block;margin-top:5px;font-size:18px}.recipe-done{border-color:#2e765c;background:#0d2b24}.recipe-done-badge{color:#8ff0c4;font-weight:800}.servings-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.servings-row input{width:90px;background:#081421;color:var(--text);border:1px solid var(--border);border-radius:10px;padding:9px}.kitchen-empty{padding:24px;text-align:center;color:var(--muted);border:1px dashed var(--border);border-radius:14px}@media(max-width:850px){.kitchen-list{grid-template-columns:1fr}.kitchen-summary{grid-template-columns:1fr 1fr}}@media(max-width:560px){.kitchen-toolbar{grid-template-columns:1fr}.kitchen-dialog{padding:15px}.timer-box{align-items:flex-start;flex-direction:column}}
 </style></head><body>
-<div class="app"><aside class="sidebar"><div class="brand"><div class="logo">🏋️</div><div><h1>ATLAS</h1><small>PWA 2.0 • Sync Center</small></div></div><nav class="nav">
+<div class="app"><aside class="sidebar"><div class="brand"><div class="logo">🏋️</div><div><h1>ATLAS</h1><small>PWA 2.1.1 • Sync Center</small></div></div><nav class="nav">
 <button class="active" data-view="dashboard">⌂ Dashboard</button><button data-view="today">✍️ Dzisiejszy wpis</button><button data-view="diet">🍽️ Dieta 14 dni</button><button data-view="shopping">🛒 Zakupy</button><button data-view="kitchen">🍳 Kuchnia</button><button data-view="training">🏋️ Trening</button><button data-view="progress">📈 Postępy</button><button data-view="analysis">🧠 Analiza</button><button data-view="coach">🤖 Trener AI</button><button data-view="photos">📷 Zdjęcia</button><button data-view="xiaomi">⌚ Zegarek / Sync</button><button data-view="history">📊 Historia</button><button data-view="settings">⚙️ Ustawienia</button></nav></aside>
 <main class="content">
 <section id="dashboard" class="view">
@@ -274,10 +274,44 @@ function atlasSyncPreview(raw){
  const rows=days.slice(0,7).map(d=>{const acts=Array.isArray(d.activities)?d.activities:[];steps+=Number(d.steps)||0;kcal+=Number(d.activeCalories)||0;activities+=acts.length;if(Number.isFinite(Number(d.sleepMinutes)))sleepDays++;if(Number.isFinite(Number(d.heartRateAvg??d.heartRate)))hrDays++;return `<div class="import-row"><span><b>${d.date||'brak daty'}</b></span><span>${Number(d.steps)||0} kroków • ${Number(d.activeCalories)||0} kcal • ${acts.length} aktywności</span></div>`}).join('');
  return `<div class="successbox"><b>Plik rozpoznany poprawnie</b><br>Źródło: ${payload.source||'ATLAS Sync Android'}<br>Eksport: ${payload.syncedAt?new Date(payload.syncedAt).toLocaleString('pl-PL'):'brak daty'}</div><div class="sync-stats"><div class="sync-stat"><span>Dni</span><b>${days.length}</b></div><div class="sync-stat"><span>Kroki łącznie</span><b>${Math.round(steps)}</b></div><div class="sync-stat"><span>Aktywne kcal</span><b>${Math.round(kcal)}</b></div><div class="sync-stat"><span>Aktywności</span><b>${activities}</b></div></div>${rows}${days.length>7?`<div class="notice">Pokazano pierwsze 7 z ${days.length} dni.</div>`:''}`;
 }
+async function readAtlasSyncJsonFile(file){
+ const buffer=await file.arrayBuffer();
+ const bytes=new Uint8Array(buffer);
+ let encoding='utf-8',offset=0;
+ if(bytes.length>=3&&bytes[0]===0xEF&&bytes[1]===0xBB&&bytes[2]===0xBF){encoding='utf-8';offset=3}
+ else if(bytes.length>=2&&bytes[0]===0xFF&&bytes[1]===0xFE){encoding='utf-16le';offset=2}
+ else if(bytes.length>=2&&bytes[0]===0xFE&&bytes[1]===0xFF){
+  const swapped=new Uint8Array(bytes.length-2);for(let i=2;i+1<bytes.length;i+=2){swapped[i-2]=bytes[i+1];swapped[i-1]=bytes[i]}
+  return parseAtlasSyncJsonText(new TextDecoder('utf-16le').decode(swapped));
+ }
+ let text=new TextDecoder(encoding,{fatal:false}).decode(bytes.subarray(offset));
+ return parseAtlasSyncJsonText(text);
+}
+function parseAtlasSyncJsonText(text){
+ let cleaned=String(text??'').replace(/^﻿/,'').replace(/[ ​‌‍⁠]/g,'').trim();
+ const firstObj=cleaned.indexOf('{'),firstArr=cleaned.indexOf('[');
+ let start=-1,end=-1;
+ if(firstObj>=0&&(firstArr<0||firstObj<firstArr)){start=firstObj;end=cleaned.lastIndexOf('}')}
+ else if(firstArr>=0){start=firstArr;end=cleaned.lastIndexOf(']')}
+ if(start>0&&end>=start)cleaned=cleaned.slice(start,end+1);
+ if(!cleaned)throw new Error('Plik jest pusty');
+ try{return JSON.parse(cleaned)}catch(err){
+  const sample=cleaned.slice(0,80).replace(/\s+/g,' ');
+  throw new Error(`Błąd JSON: ${err.message}. Początek pliku: ${sample}`);
+ }
+}
 q('atlasSyncFile').onchange=async e=>{
  atlasSyncFilePayload=null;const f=e.target.files?.[0];q('atlasSyncFileState').textContent=f?f.name:'Nie wybrano pliku.';
  if(!f){q('atlasSyncFilePreview').innerHTML='<div class="empty">Po wybraniu pliku zobaczysz podgląd danych.</div>';return}
- try{const payload=JSON.parse(await f.text());q('atlasSyncFilePreview').innerHTML=atlasSyncPreview(payload);atlasSyncFilePayload=payload}catch(err){console.error(err);q('atlasSyncFilePreview').innerHTML='<div class="warning">Nieprawidłowy plik. Wybierz plik utworzony przez ATLAS Sync Android.</div>'}
+ try{
+  const payload=await readAtlasSyncJsonFile(f);
+  q('atlasSyncFilePreview').innerHTML=atlasSyncPreview(payload);
+  atlasSyncFilePayload=payload;
+ }catch(err){
+  console.error(err);
+  const safe=String(err?.message||err).replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+  q('atlasSyncFilePreview').innerHTML=`<div class="warning"><b>Nie udało się odczytać pliku.</b><br>${safe}<br><span class="small">Nazwa: ${f.name}, rozmiar: ${f.size} B</span></div>`;
+ }
 };
 q('clearAtlasSyncFile').onclick=()=>{atlasSyncFilePayload=null;q('atlasSyncFile').value='';q('atlasSyncFileState').textContent='Nie wybrano pliku.';q('atlasSyncFilePreview').innerHTML='<div class="empty">Po wybraniu pliku zobaczysz podgląd danych.</div>'};
 q('importAtlasSyncFile').onclick=()=>{if(!atlasSyncFilePayload)return toast('Najpierw wybierz poprawny plik ATLAS Sync');try{const result=importAtlasSyncPayload(atlasSyncFilePayload,q('atlasSyncMode')?.value||'overwrite-auto');const msg=result.message;atlasSyncFilePayload=null;q('atlasSyncFile').value='';q('atlasSyncFileState').textContent='Zaimportowano poprawnie';q('atlasSyncFilePreview').innerHTML='<div class="successbox">'+msg+'</div>';render();toast(msg)}catch(e){console.error(e);toast('Nie udało się zaimportować pliku ATLAS Sync')}};
