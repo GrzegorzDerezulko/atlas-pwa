@@ -1,0 +1,8 @@
+ATLAS Core 3.0 FINAL
+
+- Jeden nadrzędny magazyn state.core.days.
+- Import ATLAS Sync zapisuje jednocześnie do Core, Dashboardu, Historii i Treningów.
+- Migracja nie nadpisuje już danych z zegarka starszymi zerowymi wpisami.
+- Ochrona przed duplikatami aktywności.
+- Weryfikacja importu przed pokazaniem komunikatu sukcesu.
+- Nowa wersja cache PWA.
