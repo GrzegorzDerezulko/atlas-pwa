@@ -1,7 +1,7 @@
 {
   "name": "ATLAS - Transformacja sylwetki",
   "short_name": "ATLAS",
-  "description": "ATLAS - dieta, lista zakupów i dziennik transformacji sylwetki",
+  "description": "ATLAS - 24-tygodniowy plan diety, treningu, cardio i regeneracji",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
