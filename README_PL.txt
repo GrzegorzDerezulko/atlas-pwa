@@ -1,24 +1,21 @@
-ATLAS PWA - ETAP 1
+ATLAS PWA - ETAP 2 v0.2
 
-Zawartość:
-- Dashboard
-- codzienny wpis
-- historia wpisów
-- ustawienia celów
-- zapis lokalny w telefonie/komputerze
-- eksport i import kopii JSON
-- instalacja jako PWA
-- działanie offline po pierwszym uruchomieniu
+NOWOŚCI:
+- pełny jadłospis na 14 dni, po 5 posiłków dziennie,
+- składniki i przygotowanie krok po kroku,
+- odhaczanie zjedzonych posiłków,
+- automatyczne liczenie zjedzonych kalorii i białka,
+- cele kalorii i białka w Ustawieniach,
+- zachowanie danych z wersji v0.1.
 
-Darmowa publikacja na GitHub Pages:
-1. Załóż konto na github.com.
-2. Utwórz publiczne repozytorium atlas-pwa.
+AKTUALIZACJA NA GITHUB:
+1. Rozpakuj ZIP.
+2. Otwórz repozytorium atlas-pwa.
 3. Kliknij Add file -> Upload files.
-4. Wgraj pliki index.html, manifest.webmanifest, service-worker.js oraz folder icons.
-5. Kliknij Commit changes.
-6. Wejdź w Settings -> Pages.
-7. Source: Deploy from a branch, Branch: main, Folder: /(root).
-8. Otwórz podany adres HTTPS na telefonie.
-9. W Chrome wybierz Zainstaluj aplikację lub Dodaj do ekranu głównego.
+4. Wgraj WSZYSTKIE pliki ze środka folderu atlas_stage2.
+5. Potwierdź nadpisanie index.html, manifest.webmanifest i service-worker.js.
+6. Kliknij Commit changes.
+7. Poczekaj 1-3 minuty i odśwież aplikację.
+8. Jeśli telefon pokazuje starą wersję, zamknij ATLAS całkowicie i uruchom ponownie.
 
-Ważne: dane są zapisywane lokalnie na urządzeniu. Regularnie używaj Eksport kopii.
+Dane z Etapu 1 pozostaną na urządzeniu, ponieważ używany jest ten sam klucz pamięci.
