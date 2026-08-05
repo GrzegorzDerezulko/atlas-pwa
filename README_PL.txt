@@ -22,3 +22,9 @@ AKTUALIZACJA GITHUB PAGES
 IMPORT
 Centrum synchronizacji -> wybierz atlas_sync_YYYY-MM-DD.json -> Importuj do ATLAS.
 Zalecany tryb: Aktualizuj dane z zegarka.
+
+WERSJA 2.1 - POPRAWKA CENTRUM SYNCHRONIZACJI
+- Zakładka w menu nazywa się "Zegarek / Sync".
+- Importuje pliki atlas_sync_YYYY-MM-DD.json z ATLAS Sync Android.
+- Po wybraniu pliku pokazuje podgląd i przycisk "Importuj do ATLAS".
+- Naprawiono inicjalizację modułu synchronizacji, która wcześniej była osadzona wewnątrz funkcji zmiany widoku.
