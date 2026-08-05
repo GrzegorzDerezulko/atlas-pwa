@@ -1,14 +1,20 @@
-ATLAS PWA - Etap 11 v1.1 - Dashboard PRO
+ATLAS PWA v1.3 - MODUL ANALIZA
 
-Nowości:
-- nowy ekran główny zoptymalizowany pod telefon,
-- dzisiejsza aktywność na pierwszym planie,
-- następny nieodhaczony posiłek,
-- liczniki kalorii, białka, wody i kroków,
-- szybkie działania, checklista i postęp transformacji.
+NOWOSCI:
+- nowa zakladka Analiza,
+- wybor okresu: 14, 28 lub 56 dni,
+- analiza zmiany masy i pasa,
+- srednia snu i krokow,
+- ocena realizacji treningow i cardio,
+- automatyczne wnioski i decyzja na kolejne 2 tygodnie,
+- bezpieczne zasady: brak zmiany kalorii przy zbyt malej liczbie danych.
 
-Aktualizacja GitHub:
-1. Wgraj wszystkie pliki z folderu atlas_stage11 do głównego katalogu repozytorium atlas-pwa.
-2. Zatwierdź Commit changes.
-3. Poczekaj kilka minut i całkowicie zamknij aplikację na telefonie.
-4. Otwórz ponownie. Gdy nadal jest stara wersja, odśwież stronę w Chrome.
+AKTUALIZACJA GITHUB:
+1. Rozpakuj ZIP.
+2. W repozytorium atlas-pwa wybierz Add file -> Upload files.
+3. Wgraj wszystkie pliki z folderu atlas_stage13.
+4. Kliknij Commit changes.
+5. Poczekaj 2-3 minuty.
+6. Zamknij i ponownie uruchom aplikacje na telefonie.
+
+Dane z poprzednich wersji pozostaja zapisane w pamieci przegladarki.
