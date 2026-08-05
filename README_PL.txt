@@ -1,18 +1,14 @@
-ATLAS PWA - ETAP 10 v1.0
+ATLAS PWA - Etap 11 v1.1 - Dashboard PRO
 
-NOWOŚCI:
-- zakładka Zdjęcia sylwetki
-- zestawy: przód, bok i tył
-- przypomnienie o zdjęciach co 4 tygodnie
-- historia zestawów zdjęć
-- porównanie przed / po dla wybranego ujęcia
-- zdjęcia zapisują się lokalnie w IndexedDB na danym urządzeniu
+Nowości:
+- nowy ekran główny zoptymalizowany pod telefon,
+- dzisiejsza aktywność na pierwszym planie,
+- następny nieodhaczony posiłek,
+- liczniki kalorii, białka, wody i kroków,
+- szybkie działania, checklista i postęp transformacji.
 
-AKTUALIZACJA GITHUB:
-1. Rozpakuj ZIP.
-2. Wgraj wszystkie pliki z folderu atlas_stage10 do głównego katalogu repozytorium atlas-pwa.
-3. Zatwierdź przez Commit changes.
-4. Poczekaj 2-3 minuty, zamknij aplikację i uruchom ponownie.
-
-WAŻNE:
-Zdjęcia nie trafiają do eksportu JSON i nie synchronizują się między telefonem a komputerem. Zachowaj oryginalne fotografie także w galerii telefonu.
+Aktualizacja GitHub:
+1. Wgraj wszystkie pliki z folderu atlas_stage11 do głównego katalogu repozytorium atlas-pwa.
+2. Zatwierdź Commit changes.
+3. Poczekaj kilka minut i całkowicie zamknij aplikację na telefonie.
+4. Otwórz ponownie. Gdy nadal jest stara wersja, odśwież stronę w Chrome.
