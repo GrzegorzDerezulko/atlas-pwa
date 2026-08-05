@@ -1,16 +1,24 @@
-ATLAS PWA v1.7 - import pliku ATLAS Sync
+ATLAS PWA 2.0 - aktualizacja centrum synchronizacji
 
-Aktualizacja GitHub:
-1. Wgraj wszystkie pliki z tego folderu do repozytorium atlas-pwa.
-2. Zatwierdź Commit changes.
-3. Poczekaj 2-3 minuty i uruchom aplikację ponownie.
+NAJWAŻNIEJSZE ZMIANY
+- poprawny import plików atlas_sync_*.json z aplikacji ATLAS Sync Android,
+- obsługa formatu: atlasSyncVersion, source, syncedAt, days,
+- trzy tryby łączenia danych,
+- dane z zegarka aktualizują kroki, aktywne kcal, sen i tętno bez usuwania wpisów ręcznych,
+- aktywności są chronione przed duplikatami,
+- historia ostatnich 25 importów,
+- importer w zakładce Centrum synchronizacji oraz w Ustawieniach,
+- nowa wersja pamięci offline Service Worker.
 
-Import:
-1. W aplikacji Android ATLAS Sync wyeksportuj plik JSON.
-2. W PWA wejdź w Xiaomi Watch S3.
-3. Wybierz plik ATLAS Sync i kliknij Importuj plik ATLAS Sync.
+AKTUALIZACJA GITHUB PAGES
+1. Otwórz repozytorium atlas-pwa.
+2. Add file -> Upload files.
+3. Wgraj pliki ze środka tego folderu (index.html, service-worker.js, manifest.webmanifest, .nojekyll i folder icons).
+4. Commit changes.
+5. Poczekaj 2-3 minuty.
+6. Na telefonie zamknij ATLAS, otwórz adres w Chrome i odśwież stronę.
+7. Jeżeli nadal widzisz starą wersję, Chrome -> Ustawienia witryny -> grzegorzderezulko.github.io -> Wyczyść i zresetuj, a następnie ponownie otwórz aplikację. Uwaga: wcześniej wykonaj eksport kopii PWA, jeżeli masz ważne dane.
 
-
-WERSJA 1.7.1
-- poprawiono komunikat 'Nieprawidłowy plik kopii'
-- plik ATLAS Sync można importować zarówno w zakładce Xiaomi Watch S3, jak i przez Ustawienia -> Import kopii / ATLAS Sync
+IMPORT
+Centrum synchronizacji -> wybierz atlas_sync_YYYY-MM-DD.json -> Importuj do ATLAS.
+Zalecany tryb: Aktualizuj dane z zegarka.

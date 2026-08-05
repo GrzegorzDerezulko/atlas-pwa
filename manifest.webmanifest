@@ -1,7 +1,7 @@
 {
-  "name": "ATLAS - Trener AI",
+  "name": "ATLAS PWA 2.0",
   "short_name": "ATLAS",
-  "description": "Dieta, trening, zakupy, postępy i Dashboard PRO.",
+  "description": "Plan transformacji, dieta, trening i synchronizacja danych z ATLAS Sync Android.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
