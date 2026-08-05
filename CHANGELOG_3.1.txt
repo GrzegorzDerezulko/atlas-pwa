@@ -1,0 +1,9 @@
+ATLAS Core 3.1
+
+- Jeden nadrzędny magazyn state.core.days.
+- Dane z zegarka mają pierwszeństwo przed pustymi/starymi wpisami legacy.
+- Dashboard i Historia czytają bezpośrednio z Core.
+- Aktywności z zegarka są widoczne w Treningu i checklistach.
+- Import JSON ma dokładniejsze błędy i toleruje niewidoczne znaki.
+- Po imporcie wykonywana jest weryfikacja zapisanych kroków i aktywnych kalorii.
+- Cache PWA podniesiony do Core 3.1.

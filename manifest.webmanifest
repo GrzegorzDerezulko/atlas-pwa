@@ -1,7 +1,7 @@
 {
-  "name": "ATLAS Core 3.0",
+  "name": "ATLAS Core 3.0 2.0",
   "short_name": "ATLAS",
-  "description": "ATLAS Core 3.0 z jednym wspólnym magazynem danych dla Dashboardu, Historii, Treningów i synchronizacji.",
+  "description": "Plan transformacji, dieta, trening i synchronizacja danych z ATLAS Sync Android.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
