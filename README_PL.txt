@@ -1,4 +1,4 @@
-ATLAS PWA - ETAP 3 v0.3.1 - POPRAWKA FILTROWANIA ZAKUPOW
+ATLAS PWA - ETAP 3 v0.4 - POPRAWKA FILTROWANIA ZAKUPOW
 
 NOWOŚĆ: automatyczna lista zakupów.
 - wybór zakresu dni 1-14
@@ -16,7 +16,7 @@ AKTUALIZACJA GITHUB:
 6. Gdy nadal widać starą wersję, otwórz adres w Chrome i odśwież stronę.
 
 
-POPRAWKA v0.3.1:
+POPRAWKA v0.4:
 - Po kliknieciu Przelicz liste zakres dni jest stosowany natychmiast.
 - Lista nie pozostaje juz na poprzednim zakresie 1-7.
 - Zmieniono wersje pamieci offline, aby telefon pobral aktualizacje.
