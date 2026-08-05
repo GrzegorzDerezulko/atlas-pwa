@@ -1,7 +1,7 @@
 {
   "name": "ATLAS - Transformacja sylwetki",
   "short_name": "ATLAS",
-  "description": "ATLAS PWA v0.9 - inteligentny trening, dieta, zakupy i postępy",
+  "description": "ATLAS PWA v1.0 - inteligentny trening, dieta, zakupy, pomiary i zdjęcia sylwetki",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
