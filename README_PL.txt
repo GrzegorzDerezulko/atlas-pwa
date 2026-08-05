@@ -1,12 +1,12 @@
-ATLAS PWA - ETAP 8 v0.8
+PROJEKT ATLAS PWA - ETAP 9 v0.9
 
-NOWOŚCI:
-- zakładka Postępy
-- pełne pomiary raz w tygodniu, tylko w niedzielę
-- pomiary: masa, pas, klatka, ramię i udo
-- wykres masy i pasa (ostatnie 12 pomiarów)
-- historia oraz usuwanie błędnych pomiarów
-- zapis wagi i pasa trafia również do dziennika
+NOWOŚĆ: INTELIGENTNY TRENING
+- aplikacja pokazuje ostatni wynik każdego ćwiczenia,
+- automatycznie proponuje ciężar na dzisiejszy trening,
+- zwiększa ciężar po wykonaniu wszystkich serii w górnym zakresie,
+- sugeruje utrzymanie lub zmniejszenie ciężaru, gdy wynik jest zbyt niski,
+- pola ciężaru są od razu uzupełniane proponowaną wartością.
 
-AKTUALIZACJA:
-Wgraj całą zawartość folderu atlas_stage8 do głównego katalogu repozytorium atlas-pwa i zatwierdź Commit changes. Po 2-3 minutach zamknij aplikację na telefonie i uruchom ponownie. Dane z v0.7 pozostają zapisane.
+AKTUALIZACJA GITHUB
+Wgraj wszystkie pliki z tego folderu do głównego katalogu repozytorium atlas-pwa i zatwierdź Commit changes.
+Dane z wcześniejszej wersji pozostają w pamięci urządzenia.
