@@ -1,0 +1,13 @@
+ATLAS Core 3.1.1
+
+Naprawiono:
+- błąd „Cannot read properties of undefined (reading 'items')” występujący po imporcie JSON;
+- nieprawidłowy numer dnia jadłospisu po migracji starszych ustawień;
+- brak zabezpieczeń w Dashboardzie, checkliście, Diecie i Kuchni, gdy plan posiłków nie został znaleziony;
+- sytuację, w której błąd odświeżenia widoku był zgłaszany jako błąd importu.
+
+Zmiany techniczne:
+- dodano getMealPlan(), który zawsze zwraca prawidłowy plan dnia 1–14;
+- currentDietDay() zawsze zwraca liczbę z zakresu 1–14;
+- import najpierw zapisuje i weryfikuje dane, a odświeżanie widoków jest zabezpieczone osobnym try/catch;
+- zaktualizowano cache service workera do atlas-core-3.1.1-20260806.
