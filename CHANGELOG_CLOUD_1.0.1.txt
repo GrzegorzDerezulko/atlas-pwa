@@ -1,0 +1,6 @@
+ATLAS Cloud 1.0.1
+
+- Naprawiono błąd: Cannot read properties of undefined (reading 'items').
+- Usunięto konflikt dwóch funkcji dateOnly, który psuł numer dnia jadłospisu po imporcie/synchronizacji.
+- Dodano zabezpieczenia widoków diety i dashboardu przed nieprawidłowym numerem dnia.
+- Zmieniono cache service workera, aby telefon pobrał poprawkę.
