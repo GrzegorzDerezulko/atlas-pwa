@@ -1,11 +1,6 @@
-ATLAS Core 3.0
+ATLAS Core 3.2
 
-Najważniejsze zmiany:
-- jeden wspólny magazyn danych Core 3.0 dla wpisów dziennych i aktywności,
-- automatyczna migracja danych ze starszych wersji,
-- import ATLAS Sync zapisuje dane do Core, Dashboardu, Historii i Treningów,
-- obsługa importu przez plik oraz awaryjnego wklejenia JSON,
-- ochrona przed duplikowaniem aktywności,
-- Historia pokazuje kroki, aktywne kalorie i tętno z zegarka.
+Wgraj zawartość tego folderu do głównego katalogu repozytorium atlas-pwa.
+Po publikacji zamknij aplikację i odśwież stronę w Chrome.
 
-Wgraj wszystkie pliki z tego folderu do głównego katalogu repozytorium GitHub Pages.
+Ważne: Dashboard pokazuje wyłącznie dane z bieżącej daty. Jeżeli importujesz plik z poprzedniego dnia, jego dane zobaczysz w nowej karcie Ostatnie dane z zegarka oraz w Historii.

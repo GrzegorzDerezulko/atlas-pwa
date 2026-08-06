@@ -1,0 +1,8 @@
+ATLAS Core 3.2
+
+- Dashboard wyraźnie rozdziela dane dzisiejsze od ostatnio zsynchronizowanych.
+- Nowa karta Ostatnie dane z zegarka pokazuje datę, kroki, aktywne kcal, sen, tętno i aktywności.
+- Gdy import dotyczy poprzedniego dnia, aplikacja nie przedstawia go błędnie jako danych dzisiejszych.
+- Historia oznacza rekordy pochodzące z zegarka.
+- Import nadal zapisuje do wspólnego Core wykorzystywanego przez Start, Historię i Trening.
+- Zaktualizowano cache PWA do Core 3.2.
