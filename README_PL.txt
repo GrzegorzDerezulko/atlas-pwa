@@ -1,4 +1,4 @@
-ATLAS Core 3.2
+ATLAS Core 3.2.1
 
 Wgraj zawartość tego folderu do głównego katalogu repozytorium atlas-pwa.
 Po publikacji zamknij aplikację i odśwież stronę w Chrome.

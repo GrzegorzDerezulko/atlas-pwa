@@ -1,0 +1,8 @@
+ATLAS Core 3.2.1
+
+- Naprawiono konflikt dwóch funkcji o nazwie dateOnly.
+- Funkcja parsująca datę importu ma teraz osobną nazwę normalizeDateValue.
+- Przywrócono poprawne działanie planu dnia, tygodnia programu, diety i renderowania po imporcie.
+- Dodano zabezpieczenia przed błędem „Cannot read properties of undefined (reading items)”.
+- Zmieniono wersję pamięci podręcznej PWA, aby telefon pobrał nowy kod.
+- Import ATLAS Sync nadal zapisuje kroki, aktywne kalorie, sen, tętno i aktywności do wspólnego Core.
