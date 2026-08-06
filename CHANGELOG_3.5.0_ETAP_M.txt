@@ -1,0 +1,17 @@
+ATLAS PWA 3.5.0 — ETAP M
+
+Dodano:
+- Trenera adaptacyjnego 2.0,
+- dzienną ocenę gotowości 0–100,
+- ocenę snu względem bazy 30-dniowej,
+- ocenę tętna względem indywidualnej mediany,
+- analizę obciążenia z ostatnich 3 dni,
+- poranny check-in energii, stresu, bolesności mięśni i bólu,
+- poziom zaufania i oznaczenie wyniku wstępnego,
+- rekomendację: pełny plan, lżejszy trening, regeneracja albo odpoczynek,
+- adaptację sugerowanych ciężarów na dzisiejszym treningu,
+- trendy 7 dni vs 30 dni,
+- historię gotowości z 14 dni,
+- kartę gotowości na Dashboardzie i ekranie treningu.
+
+Dane check-inu są przechowywane lokalnie w kopii stanu ATLAS.

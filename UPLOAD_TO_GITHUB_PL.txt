@@ -1,17 +1,9 @@
-ATLAS PWA 3.4.0 — ETAP L
+ATLAS PWA 3.5.0 — ETAP M
 
-GDZIE WGRAĆ:
-GitHub → repozytorium atlas-pwa → gałąź main.
-Cloudflare pobierze zmianę automatycznie.
-
-JAK WGRAĆ:
-1. Rozpakuj ZIP.
-2. Otwórz folder ATLAS_PWA_3.4.0_ETAP_L.
-3. Zaznacz całą zawartość folderu.
-4. W GitHub wybierz Add file → Upload files.
-5. Zastąp istniejące pliki w głównym katalogu repozytorium.
-6. Kliknij Commit changes.
-7. Poczekaj na zielony status wdrożenia w Cloudflare Pages.
-
-Po wdrożeniu otwórz aplikację i sprawdź napis:
-PWA 3.4 • Raport tygodniowy
+1. Rozpakuj archiwum.
+2. Otwórz folder ATLAS_PWA_3.5.0_ETAP_M.
+3. Wgraj CAŁĄ ZAWARTOŚĆ folderu do głównego katalogu repozytorium atlas-pwa na GitHubie.
+4. Zastąp istniejące pliki.
+5. Zatwierdź zmiany w gałęzi main.
+6. Poczekaj na status Success w Cloudflare Pages.
+7. Otwórz aplikację i sprawdź napis PWA 3.5 • Gotowość dzienna.

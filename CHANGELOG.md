@@ -34,3 +34,10 @@
 - dodano brakujące ikony PWA,
 - naprawiono instalowanie i odświeżanie Service Workera,
 - usunięto pliki Gradle niezwiązane z PWA.
+
+
+## 3.5.0 — ETAP M
+
+- Trener adaptacyjny 2.0 i gotowość dzienna.
+- Poranny check-in i adaptacja intensywności treningu.
+- Trend 7/30 dni oraz historia gotowości.
