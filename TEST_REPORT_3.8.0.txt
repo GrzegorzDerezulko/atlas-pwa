@@ -1,0 +1,39 @@
+ATLAS PWA 3.8.0 — ETAP P
+Raport walidacji technicznej
+Data: 2026-08-06
+
+WYNIK: ZALICZONY
+
+1. Składnia JavaScript PWA
+- wyodrębniono oba skrypty z index.html,
+- node --check: bez błędów dla obu skryptów.
+
+2. Cloudflare Pages Function
+- node --check functions/api/ai.js: bez błędów,
+- import modułu jako ESM: poprawny,
+- GET /api/ai bez skonfigurowanego sekretu: HTTP 200 i poprawny status usługi,
+- POST /api/ai bez OPENAI_API_KEY: kontrolowany HTTP 503 z czytelnym komunikatem,
+- żądania czatu wymagają tokenu Firebase użytkownika,
+- walidacja działań AI i ograniczenie częstotliwości są aktywne.
+
+3. Interfejs Trenera AI
+- widok desktopowy: poprawne renderowanie,
+- widok mobilny: poprawne renderowanie i dostępny przycisk wysyłania,
+- status połączenia i konfiguracji jest widoczny,
+- karta proponowanej zmiany wymaga potwierdzenia użytkownika,
+- lokalny tryb awaryjny odpowiada przy braku klucza lub połączenia,
+- w teście lokalnym utworzono odpowiedź i propozycję zmiany bez błędów JavaScript.
+
+4. PWA i bezpieczeństwo
+- service worker nie buforuje ścieżki /api/,
+- klucz OpenAI nie znajduje się w kodzie publicznym,
+- do modelu wysyłany jest zagregowany kontekst, bez adresu e-mail i bez pełnych surowych rekordów,
+- odpowiedzi przechodzą moderację,
+- zapis historii Firebase jest opcjonalny i ma lokalny tryb zapasowy.
+
+5. Archiwum instalacyjne
+- test integralności ZIP: bez błędów,
+- zachowana struktura katalogu głównego, w tym functions/api/ai.js.
+
+UWAGA WDROŻENIOWA
+Pełny czat chmurowy uruchomi się po dodaniu sekretu OPENAI_API_KEY w ustawieniach projektu Cloudflare Pages i wykonaniu nowego wdrożenia. Bez sekretu aplikacja celowo korzysta z lokalnego trybu ETAPU O.

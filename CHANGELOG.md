@@ -1,5 +1,13 @@
 # Historia zmian ATLAS PWA
 
+## 3.8.0 — ETAP P
+
+- pełny czat AI przez Cloudflare Pages Function
+- bezpieczne uwierzytelnienie Firebase i sekret OpenAI poza kodem klienta
+- analiza danych ATLAS i zatwierdzane propozycje zmian
+- opcjonalna synchronizacja historii rozmów przez Firestore
+- lokalny tryb awaryjny
+
 ## 3.7.0 — ETAP O
 
 - adaptacyjny plan tygodnia zależny od gotowości i postępów

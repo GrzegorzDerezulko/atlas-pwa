@@ -1,8 +1,8 @@
 {
   "id": "./",
-  "name": "ATLAS PWA 3.7.0 — ETAP O",
+  "name": "ATLAS PWA 3.8.0 — ETAP P",
   "short_name": "ATLAS",
-  "description": "ATLAS z adaptacyjnym planem treningowym, gotowością, postępami i lokalnym czatem zmian treningu oraz diety.",
+  "description": "ATLAS z bezpiecznym Trenerem AI w chmurze, analizą gotowości oraz zatwierdzanymi zmianami treningu i diety.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
@@ -31,9 +31,22 @@
   ],
   "shortcuts": [
     {
+      "name": "Trener AI",
+      "short_name": "AI",
+      "description": "Otwórz pełny czat z trenerem ATLAS",
+      "url": "./#ai",
+      "icons": [
+        {
+          "src": "icons/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
       "name": "Plan adaptacyjny",
       "short_name": "Adaptacja",
-      "description": "Otwórz adaptacyjny plan i czat trenera",
+      "description": "Otwórz adaptacyjny plan treningowy",
       "url": "./#adaptive",
       "icons": [
         {
@@ -48,19 +61,6 @@
       "short_name": "Plan",
       "description": "Otwórz plan dnia i centrum powiadomień",
       "url": "./#stageN=notifications",
-      "icons": [
-        {
-          "src": "icons/icon-192.png",
-          "sizes": "192x192",
-          "type": "image/png"
-        }
-      ]
-    },
-    {
-      "name": "Trening",
-      "short_name": "Trening",
-      "description": "Otwórz dzisiejszy trening",
-      "url": "./#training",
       "icons": [
         {
           "src": "icons/icon-192.png",

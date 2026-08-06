@@ -1,31 +1,30 @@
-# ATLAS PWA 3.7.0 — ETAP O
+# ATLAS PWA 3.8.0 — ETAP P
 
-## Adaptacyjny plan treningowy
+## Trener AI w chmurze
 
-Zakładka **Plan adaptacyjny** łączy wynik gotowości z ETAPU M, historię treningów oraz postępy ćwiczeń. ATLAS może:
+ETAP P dodaje pełny czat dostępny w zakładce **Trener AI**. Model otrzymuje wyłącznie zwięzłe podsumowanie danych ATLAS i może:
 
-- zachować plan bazowy,
-- ograniczyć objętość treningu,
-- zasugerować progres,
-- zamienić ciężki trening na regenerację przy bardzo niskiej gotowości,
-- uwzględnić ręczne zmiany na konkretny dzień.
+- wyjaśnić wynik gotowości,
+- omówić tydzień treningowy,
+- zaproponować lżejszy trening lub regenerację,
+- przygotować zmianę dnia treningowego,
+- zamienić ćwiczenie,
+- zaproponować zmianę kalorii, białka lub posiłku.
 
-## Czat z trenerem
+Zmiany nigdy nie są stosowane automatycznie. Najpierw pojawia się karta **Propozycja zmiany — wymaga potwierdzenia**.
 
-Czat działa lokalnie i nie wysyła rozmów do zewnętrznej usługi. Przykłady poleceń:
+## Uruchomienie chmury
 
-- `Jutro zamiast treningu chcę spacer`
-- `Ustaw kalorie na 2200 i białko na 180 g`
-- `Zamień przysiad goblet na przysiad do ławki`
-- `Co proponujesz na dziś?`
+Po wgraniu plików do GitHuba wykonaj instrukcję z `CLOUDFLARE_AI_SETUP_PL.md`. Bez sekretu OpenAI czat pozostanie w dotychczasowym trybie lokalnym.
 
-Każda zmiana jest najpierw wyświetlana do zatwierdzenia. Można ją później usunąć w sekcji **Wprowadzone zmiany**.
+## Historia między urządzeniami
 
-Pełna swobodna rozmowa AI będzie wymagała osobnego, zabezpieczonego backendu. Nie należy umieszczać klucza API w plikach PWA publikowanych na GitHubie.
+Opcjonalna synchronizacja przez Firebase wymaga reguły z `FIRESTORE_RULES_ETAP_P.txt`. Brak tej reguły nie blokuje rozmowy AI.
 
 ## Publikacja
 
 1. Rozpakuj ZIP.
-2. Wgraj zawartość folderu `ATLAS_PWA_3.7.0_ETAP_O` do głównego katalogu repozytorium `atlas-pwa`.
+2. Wgraj zawartość folderu `ATLAS_PWA_3.8.0_ETAP_P` do głównego katalogu repozytorium `atlas-pwa`.
 3. Zatwierdź zmiany na gałęzi `main`.
-4. Cloudflare Pages opublikuje aktualizację automatycznie.
+4. Cloudflare Pages opublikuje PWA i katalog `functions`.
+5. Dodaj sekret `OPENAI_API_KEY` w Cloudflare i wykonaj ponowne wdrożenie.

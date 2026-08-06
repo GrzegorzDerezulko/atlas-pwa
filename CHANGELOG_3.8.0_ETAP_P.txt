@@ -1,0 +1,17 @@
+ATLAS PWA 3.8.0 — ETAP P
+
+- pełny czat Trenera AI w nowej zakładce
+- bezpieczna Cloudflare Pages Function pod adresem /api/ai
+- klucz OpenAI przechowywany wyłącznie jako zaszyfrowany sekret Cloudflare
+- weryfikacja zalogowanego użytkownika tokenem Firebase
+- analiza zagregowanej gotowości, snu, tętna, kroków, treningów i diety
+- swobodne pytania oraz wyjaśnianie rekomendacji
+- propozycje zmian treningu, ćwiczeń, kalorii, białka i posiłków
+- każda zmiana wymaga osobnego zatwierdzenia
+- lokalny tryb awaryjny przy braku chmury lub internetu
+- opcjonalna synchronizacja historii czatu przez Firestore
+- moderacja wiadomości i ograniczenie częstotliwości żądań
+- OpenAI Responses API z ustrukturyzowaną odpowiedzią i store: false
+- cache PWA atlas-pwa-3-8-0-stage-p
+
+Wymagane po wdrożeniu: dodać sekret OPENAI_API_KEY w Cloudflare Pages i ponownie wdrożyć projekt.
