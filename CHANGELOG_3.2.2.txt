@@ -1,0 +1,12 @@
+ATLAS PWA 3.2.2 – Clean Realtime Fix
+
+- Naprawiono konflikt dwóch funkcji dateOnly, który psuł plan dnia, tydzień programu i niedzielne pomiary.
+- Dodano walidację i odbudowę starszego stanu aplikacji.
+- Zabezpieczono widoki diety i kuchni przed błędem „Cannot read properties of undefined (reading items)”.
+- Przebudowano moduł Firebase na odporny loader z dokładnymi komunikatami błędów i limitem czasu logowania.
+- Status LIVE jest aktywowany dopiero po uruchomieniu nasłuchu danych dziennych i aktywności.
+- Dodano przycisk ponownego sprawdzenia połączenia.
+- Automatyczna synchronizacja jest głównym trybem; import JSON pozostaje opcją awaryjną.
+- Dodano brakujące ikony 192x192 i 512x512.
+- Zmieniono strategię Service Workera oraz numer pamięci podręcznej.
+- Usunięto pliki Gradle niezwiązane z PWA.

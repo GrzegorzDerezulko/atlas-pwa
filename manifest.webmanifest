@@ -1,13 +1,20 @@
 {
-  "name": "ATLAS PWA 3.2",
+  "id": "./",
+  "name": "ATLAS PWA 3.2.2",
   "short_name": "ATLAS",
-  "description": "Plan transformacji, dieta, trening i synchronizacja danych z ATLAS Sync Android.",
+  "description": "Plan transformacji, dieta, trening oraz automatyczna synchronizacja danych z ATLAS Sync Android przez Firebase.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
+  "orientation": "portrait-primary",
   "background_color": "#07101d",
   "theme_color": "#0b1220",
   "lang": "pl",
+  "categories": [
+    "health",
+    "fitness",
+    "lifestyle"
+  ],
   "icons": [
     {
       "src": "icons/icon-192.png",

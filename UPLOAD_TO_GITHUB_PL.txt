@@ -1,0 +1,11 @@
+ATLAS PWA 3.2.2 - aktualizacja GitHub Pages
+
+1. Rozpakuj paczkę.
+2. W repozytorium GrzegorzDerezulko/atlas-pwa wgraj wszystkie pliki i folder icons z tej paczki do katalogu głównego.
+3. Usuń z repozytorium stare pliki build.gradle.kts, settings.gradle.kts i gradle.properties, jeżeli nadal tam są.
+4. Zatwierdź Commit changes.
+5. Poczekaj na publikację GitHub Pages.
+6. Na telefonie otwórz stronę w Chrome, odśwież ją, całkowicie zamknij ATLAS i uruchom ponownie.
+7. W zakładce Zegarek zaloguj się tym samym kontem co w ATLAS Sync Android.
+
+Wersję sprawdzisz po tytule: ATLAS PWA 3.2.2 - Clean Realtime Fix.
