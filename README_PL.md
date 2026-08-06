@@ -1,32 +1,31 @@
-# ATLAS PWA 3.6.0 — ETAP N
+# ATLAS PWA 3.7.0 — ETAP O
 
-## Inteligentne powiadomienia i plan dnia
+## Adaptacyjny plan treningowy
 
-W menu wybierz **Plan dnia**. ATLAS przygotowuje przypomnienia na podstawie:
+Zakładka **Plan adaptacyjny** łączy wynik gotowości z ETAPU M, historię treningów oraz postępy ćwiczeń. ATLAS może:
 
-- gotowości i rekomendacji Trenera 2.0,
-- świeżości danych zegarka i Firebase,
-- dzisiejszego treningu lub aktywności,
-- aktualnej liczby kroków,
-- pory snu i kilku słabszych dni z rzędu.
+- zachować plan bazowy,
+- ograniczyć objętość treningu,
+- zasugerować progres,
+- zamienić ciężki trening na regenerację przy bardzo niskiej gotowości,
+- uwzględnić ręczne zmiany na konkretny dzień.
 
-Można ustawić godziny, cel kroków, rodzaje komunikatów oraz tryb ciszy. Centrum powiadomień przechowuje historię na tym urządzeniu.
+## Czat z trenerem
 
-## Pierwsze uruchomienie
+Czat działa lokalnie i nie wysyła rozmów do zewnętrznej usługi. Przykłady poleceń:
 
-1. Otwórz **Plan dnia**.
-2. Kliknij **Włącz powiadomienia** i zaakceptuj zgodę przeglądarki.
-3. Ustaw godziny oraz rodzaje przypomnień.
-4. Kliknij **Zapisz harmonogram**.
-5. Użyj **Wyślij test**, aby sprawdzić systemowe powiadomienie.
+- `Jutro zamiast treningu chcę spacer`
+- `Ustaw kalorie na 2200 i białko na 180 g`
+- `Zamień przysiad goblet na przysiad do ławki`
+- `Co proponujesz na dziś?`
 
-## Ograniczenie techniczne
+Każda zmiana jest najpierw wyświetlana do zatwierdzenia. Można ją później usunąć w sekcji **Wprowadzone zmiany**.
 
-ATLAS jest statyczną PWA na Cloudflare Pages. Plan i historia są odświeżane po otwarciu aplikacji. Bez osobnego serwera push Android lub przeglądarka może wstrzymać zegar aplikacji po jej całkowitym zamknięciu, dlatego przypomnienie o dokładnej godzinie nie jest wtedy gwarantowane.
+Pełna swobodna rozmowa AI będzie wymagała osobnego, zabezpieczonego backendu. Nie należy umieszczać klucza API w plikach PWA publikowanych na GitHubie.
 
 ## Publikacja
 
 1. Rozpakuj ZIP.
-2. Wgraj **zawartość folderu** do głównego katalogu repozytorium `atlas-pwa` na GitHubie.
-3. Zatwierdź zmiany w gałęzi `main`.
-4. Cloudflare Pages opublikuje wersję automatycznie.
+2. Wgraj zawartość folderu `ATLAS_PWA_3.7.0_ETAP_O` do głównego katalogu repozytorium `atlas-pwa`.
+3. Zatwierdź zmiany na gałęzi `main`.
+4. Cloudflare Pages opublikuje aktualizację automatycznie.

@@ -1,5 +1,12 @@
 # Historia zmian ATLAS PWA
 
+## 3.7.0 — ETAP O
+
+- adaptacyjny plan tygodnia zależny od gotowości i postępów
+- automatyczne ograniczenie ciężkiego treningu przy słabej regeneracji
+- lokalny czat z potwierdzaniem zmian treningu i diety
+- ręczne nadpisania planu, ćwiczeń i posiłków
+
 ## 3.6.0 — ETAP N
 
 - inteligentny plan dnia i harmonogram przypomnień

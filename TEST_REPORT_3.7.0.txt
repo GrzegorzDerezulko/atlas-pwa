@@ -1,0 +1,28 @@
+ATLAS PWA 3.7.0 — ETAP O
+Raport walidacji
+
+Wynik: ZALICZONO
+
+Sprawdzone elementy:
+- składnia głównego JavaScript: poprawna (node --check)
+- składnia modułu Firebase: poprawna (node --check)
+- składnia service workera: poprawna (node --check)
+- manifest.webmanifest: poprawny JSON
+- cache PWA: atlas-pwa-3-7-0-stage-o
+- widok Plan adaptacyjny na komputerze: poprawny
+- układ mobilny: poprawny
+- generowanie adaptacyjnego tygodnia: działa
+- ręczna zmiana aktywności dla wybranej daty: działa
+- czat: zmiana kalorii i białka: działa
+- czat: zmiana jutrzejszego treningu na spacer: działa
+- czat: podmiana konkretnego ćwiczenia: działa
+- czat: podmiana posiłku z kcal i białkiem: działa
+- zatwierdzanie zmian przed zapisem: działa
+- zapis zmian w pamięci urządzenia: działa
+- widok Diety odczytuje podmieniony posiłek: działa
+- widok Treningu renderuje plan: działa
+- błędy JavaScript podczas testu przeglądarkowego: 0
+
+Uwagi:
+- czat ETAPU O jest lokalnym asystentem poleceń i działa bez zewnętrznego modelu AI;
+- pełna swobodna rozmowa AI wymaga zabezpieczonego backendu i nie może przechowywać klucza API w publicznym PWA.

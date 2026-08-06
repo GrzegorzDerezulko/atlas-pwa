@@ -1,8 +1,8 @@
 {
   "id": "./",
-  "name": "ATLAS PWA 3.6.0 — ETAP N",
+  "name": "ATLAS PWA 3.7.0 — ETAP O",
   "short_name": "ATLAS",
-  "description": "ATLAS z synchronizacją Firebase, gotowością dzienną, planem dnia i inteligentnymi powiadomieniami.",
+  "description": "ATLAS z adaptacyjnym planem treningowym, gotowością, postępami i lokalnym czatem zmian treningu oraz diety.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
@@ -31,6 +31,19 @@
   ],
   "shortcuts": [
     {
+      "name": "Plan adaptacyjny",
+      "short_name": "Adaptacja",
+      "description": "Otwórz adaptacyjny plan i czat trenera",
+      "url": "./#adaptive",
+      "icons": [
+        {
+          "src": "icons/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
       "name": "Plan dnia",
       "short_name": "Plan",
       "description": "Otwórz plan dnia i centrum powiadomień",
@@ -44,10 +57,10 @@
       ]
     },
     {
-      "name": "Gotowość",
-      "short_name": "Gotowość",
-      "description": "Otwórz Trenera adaptacyjnego 2.0",
-      "url": "./#coach",
+      "name": "Trening",
+      "short_name": "Trening",
+      "description": "Otwórz dzisiejszy trening",
+      "url": "./#training",
       "icons": [
         {
           "src": "icons/icon-192.png",
