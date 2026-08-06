@@ -1,11 +1,12 @@
-ATLAS PWA 3.2.2 - aktualizacja GitHub Pages
+ATLAS PWA 3.3.0 — aktualizacja przez GitHub + Cloudflare Pages
 
 1. Rozpakuj paczkę.
-2. W repozytorium GrzegorzDerezulko/atlas-pwa wgraj wszystkie pliki i folder icons z tej paczki do katalogu głównego.
-3. Usuń z repozytorium stare pliki build.gradle.kts, settings.gradle.kts i gradle.properties, jeżeli nadal tam są.
-4. Zatwierdź Commit changes.
-5. Poczekaj na publikację GitHub Pages.
-6. Na telefonie otwórz stronę w Chrome, odśwież ją, całkowicie zamknij ATLAS i uruchom ponownie.
-7. W zakładce Zegarek zaloguj się tym samym kontem co w ATLAS Sync Android.
+2. W repozytorium GrzegorzDerezulko/atlas-pwa wgraj wszystkie pliki i folder icons z paczki do katalogu głównego.
+3. Zatwierdź Commit changes na gałęzi main.
+4. Cloudflare Pages automatycznie rozpocznie nowe wdrożenie.
+5. Poczekaj, aż wdrożenie w Cloudflare otrzyma status Success.
+6. Na telefonie otwórz adres atlas-pwa-7gi.pages.dev w Chrome.
+7. Odśwież stronę, całkowicie zamknij zainstalowany ATLAS i uruchom ponownie.
+8. W zakładce Zegarek / Sync sprawdź tytuł: ATLAS PWA 3.3.0 — ETAP K.
 
-Wersję sprawdzisz po tytule: ATLAS PWA 3.2.2 - Clean Realtime Fix.
+Nie włączaj ponownie GitHub Pages. GitHub przechowuje kod, a aplikację publikuje Cloudflare Pages.

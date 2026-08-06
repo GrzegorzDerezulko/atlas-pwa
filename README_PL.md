@@ -1,34 +1,23 @@
-# ATLAS PWA 3.2.2 – Clean Realtime Fix
+# ATLAS PWA 3.3.0 — ETAP K
 
-To jest czysta gałąź PWA przeznaczona do GitHub Pages. Nie zawiera plików projektu Android/Gradle.
+## Co dodano
 
-## Aktualizacja na GitHub Pages
+- stabilizację synchronizacji Firebase / Firestore,
+- automatyczne ponawianie połączenia,
+- kontrolę świeżości danych i źródła serwer/cache,
+- historię danych z zegarka z 7, 30 lub 90 dni,
+- wykres kroków i snu,
+- zestawienie średnich oraz kompletności danych.
 
-1. Wgraj do głównego katalogu repozytorium wszystkie pliki i folder `icons` z tej paczki.
-2. Zatwierdź zmiany i poczekaj na publikację GitHub Pages.
-3. Otwórz stronę w Chrome, odśwież ją, a następnie zamknij i ponownie uruchom zainstalowaną aplikację ATLAS.
-4. Wejdź w **Zegarek** i zaloguj się tym samym kontem Firebase co w ATLAS Sync Android.
+## Codzienne użycie
 
-## Synchronizacja LIVE
+1. Xiaomi Watch S3 synchronizuje dane z Mi Fitness.
+2. ATLAS Sync Android wysyła je do Firebase.
+3. ATLAS PWA pobiera dane automatycznie po zalogowaniu.
+4. W zakładce **Zegarek / Sync** można sprawdzić stan połączenia i historię 30 dni.
 
-Normalny przepływ danych:
+PWA nie musi być stale otwarte. Po ponownym uruchomieniu pobiera aktualny stan Firestore i uzupełnia lokalną historię. Import JSON pozostaje wyłącznie narzędziem awaryjnym.
 
-`Xiaomi Watch S3 → Mi Fitness → Health Connect → ATLAS Sync Android → Firestore → ATLAS PWA`
+## Publikacja
 
-Import pliku JSON pozostał wyłącznie jako narzędzie awaryjne i jest domyślnie zwinięty.
-
-## Wymagania Firebase
-
-- w Authentication musi być włączone logowanie Email/Password,
-- domena `grzegorzderezulko.github.io` musi znajdować się w Authorized domains,
-- Android i PWA muszą używać tego samego projektu Firebase oraz tego samego UID,
-- dane są oczekiwane w `users/{uid}/daily` i `users/{uid}/activities`.
-
-## Najważniejsze poprawki
-
-- przywrócono prawidłowe obliczanie dni i tygodni programu (usunięto konflikt dwóch funkcji daty),
-- zabezpieczono dietę i kuchnię przed błędem `reading items`,
-- przebudowano logowanie i diagnostykę Firebase,
-- dodano brakujące ikony PWA,
-- naprawiono instalację i aktualizację Service Workera,
-- usunięto obce pliki Gradle z paczki PWA.
+Wgraj wszystkie pliki do głównego katalogu gałęzi `main` repozytorium `atlas-pwa`. Cloudflare Pages opublikuje zmianę automatycznie.

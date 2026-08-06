@@ -1,4 +1,4 @@
-const CACHE='atlas-pwa-3-2-2-clean';
+const CACHE='atlas-pwa-3-3-0-stage-k';
 const CORE=['./','./index.html','./manifest.webmanifest','./icons/icon-192.png','./icons/icon-512.png'];
 self.addEventListener('install',event=>{
  event.waitUntil((async()=>{const cache=await caches.open(CACHE);await Promise.allSettled(CORE.map(asset=>cache.add(asset)));await self.skipWaiting();})());

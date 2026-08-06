@@ -1,0 +1,16 @@
+ATLAS PWA 3.3.0 — raport kontroli
+
+Wykonane kontrole:
+- składnia głównego skryptu JavaScript: OK
+- składnia modułu Firebase JavaScript: OK
+- składnia Service Workera: OK
+- manifest JSON: OK
+- unikalność identyfikatorów HTML: OK
+- obecność ikon 192x192 i 512x512: OK
+- odpowiedź lokalnego serwera dla index.html: HTTP 200
+- odpowiedź lokalnego serwera dla manifestu: HTTP 200
+- odpowiedź lokalnego serwera dla Service Workera: HTTP 200
+- kontrola integralności ZIP: OK
+
+Ograniczenie testu:
+Nie wykonano logowania na prywatne konto Firebase użytkownika. Po wdrożeniu należy sprawdzić, czy panel LIVE pokazuje UID, liczbę dni i aktywności.

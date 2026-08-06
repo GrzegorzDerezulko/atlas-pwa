@@ -1,8 +1,8 @@
 {
   "id": "./",
-  "name": "ATLAS PWA 3.2.2",
+  "name": "ATLAS PWA 3.3.0 — ETAP K",
   "short_name": "ATLAS",
-  "description": "Plan transformacji, dieta, trening oraz automatyczna synchronizacja danych z ATLAS Sync Android przez Firebase.",
+  "description": "Plan transformacji z Dashboard LIVE, stabilną synchronizacją Firebase oraz historią danych zegarka z 30 dni.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

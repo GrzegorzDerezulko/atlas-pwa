@@ -1,0 +1,14 @@
+ATLAS PWA 3.3.0 — ETAP K
+
+- panel stabilności synchronizacji Firebase
+- automatyczne ponawianie połączenia z progresywnym opóźnieniem
+- ręczne wymuszenie odczytu bezpośrednio z serwera
+- historia zegarka 7 / 30 / 90 dni
+- wykres kroków i snu bez zewnętrznych bibliotek
+- średnie kroków, snu, tętna, suma aktywnych kcal i aktywności
+- kontrola kompletności danych w ostatnich 30 dniach
+- ostrzeżenie o nieaktualnych danych zegarka
+- rozróżnienie danych z serwera i pamięci podręcznej
+- zapamiętywanie ostatniego poprawnego połączenia i błędów
+- odświeżanie po odzyskaniu internetu i po powrocie do aplikacji
+- aktualizacja cache PWA do atlas-pwa-3-3-0-stage-k
