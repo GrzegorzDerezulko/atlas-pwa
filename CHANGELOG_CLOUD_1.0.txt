@@ -1,0 +1,7 @@
+ATLAS Cloud 1.0 – Realtime Dashboard
+
+- logowanie e-mail/hasło do Firebase
+- nasłuchiwanie Firestore w czasie rzeczywistym
+- automatyczna aktualizacja Dashboardu, Historii i Treningu
+- zachowany import JSON jako tryb awaryjny
+- wymagane to samo konto Firebase w Androidzie i PWA
