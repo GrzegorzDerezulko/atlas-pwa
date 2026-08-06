@@ -1,27 +1,3 @@
-ATLAS PWA 3.5.0 — RAPORT TESTÓW
-Data: 2026-08-06
+ATLAS PWA 3.5.0 — raport testów
 
-1. Składnia głównego JavaScript (node --check): OK
-2. Składnia modułu Firebase (node --check): OK
-3. Manifest PWA — poprawny JSON: OK
-4. Service worker — składnia i nowy cache 3.5.0: OK
-5. Kontrola powtarzających się identyfikatorów HTML: OK (brak duplikatów)
-6. Widok mobilny 390 × 844 w Chromium: OK
-7. Uruchomienie Dashboardu i karty gotowości: OK
-8. Widok ETAP M / Gotowość: OK
-9. Obliczenie gotowości z 10–12 dni danych testowych: OK
-10. Poziom zaufania przy pełniejszych danych: OK
-11. Składniki wyniku: sen, tętno, obciążenie, energia, stres, bolesność: OK
-12. Zapis porannego check-inu: OK
-13. Ograniczenie wyniku przy zaznaczeniu bólu: OK (maks. 35/100 w teście)
-14. Rekomendacja regeneracji przy słabej gotowości: OK
-15. Rekomendacja pełnego planu przy wysokiej gotowości: OK
-16. Trend 7 dni vs 30 dni: OK
-17. Historia gotowości 14 dni: OK
-18. Banner gotowości na ekranie treningu: OK
-19. Adaptacja sugerowanego ciężaru dla dnia bieżącego: OK
-20. Zachowanie wersji ETAP K i ETAP L: OK
-
-Uwagi:
-- Test UI przeprowadzono lokalnie bez połączenia z Firebase; składnia modułu Firebase została sprawdzona osobno.
-- Gotowość jest wskaźnikiem orientacyjnym i nie stanowi diagnozy medycznej.
+[uzupełniany po walidacji]

@@ -1,9 +1,12 @@
-ATLAS PWA 3.5.0 — ETAP M
+ATLAS PWA 3.6.0 — ETAP N
 
-1. Rozpakuj archiwum.
-2. Otwórz folder ATLAS_PWA_3.5.0_ETAP_M.
-3. Wgraj CAŁĄ ZAWARTOŚĆ folderu do głównego katalogu repozytorium atlas-pwa na GitHubie.
-4. Zastąp istniejące pliki.
-5. Zatwierdź zmiany w gałęzi main.
-6. Poczekaj na status Success w Cloudflare Pages.
-7. Otwórz aplikację i sprawdź napis PWA 3.5 • Gotowość dzienna.
+1. Rozpakuj Projekt_ATLAS_PWA_3.6.0_ETAP_N.zip.
+2. Otwórz folder ATLAS_PWA_3.6.0_ETAP_N.
+3. Zaznacz całą jego zawartość.
+4. GitHub → repozytorium atlas-pwa → Add file → Upload files.
+5. Zastąp istniejące pliki w głównym katalogu.
+6. Kliknij Commit changes na gałęzi main.
+7. Cloudflare wdroży zmianę automatycznie.
+
+Po wdrożeniu sprawdź napis:
+PWA 3.6 • Plan dnia

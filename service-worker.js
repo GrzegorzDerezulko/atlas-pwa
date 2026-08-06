@@ -1,4 +1,4 @@
-const CACHE='atlas-pwa-3-5-0-stage-m';
+const CACHE='atlas-pwa-3-6-0-stage-n';
 const CORE=['./','./index.html','./manifest.webmanifest','./icons/icon-192.png','./icons/icon-512.png'];
 self.addEventListener('install',event=>{
  event.waitUntil((async()=>{const cache=await caches.open(CACHE);await Promise.allSettled(CORE.map(asset=>cache.add(asset)));await self.skipWaiting();})());
@@ -17,4 +17,20 @@ self.addEventListener('fetch',event=>{
   return cached||network;
  }));
 });
-self.addEventListener('message',event=>{if(event.data==='SKIP_WAITING')self.skipWaiting();});
+self.addEventListener('message',event=>{
+ const data=event.data;
+ if(data==='SKIP_WAITING'){self.skipWaiting();return;}
+ if(data&&data.type==='SHOW_NOTIFICATION'){
+  event.waitUntil(self.registration.showNotification(data.title||'ATLAS',data.options||{}));
+ }
+});
+self.addEventListener('notificationclick',event=>{
+ event.notification.close();
+ const data=event.notification.data||{},task=encodeURIComponent(data.taskId||'workout'),action=encodeURIComponent(event.action||'open');
+ const target=new URL(`./#stageN=notifications&task=${task}${action&&action!=='open'?`&action=${action}`:''}`,self.registration.scope).href;
+ event.waitUntil((async()=>{
+  const list=await clients.matchAll({type:'window',includeUncontrolled:true});
+  for(const client of list){if('focus'in client){await client.focus();if('navigate'in client)await client.navigate(target);return;}}
+  if(clients.openWindow)await clients.openWindow(target);
+ })());
+});

@@ -1,5 +1,20 @@
 # Historia zmian ATLAS PWA
 
+## 3.6.0 — ETAP N
+
+- inteligentny plan dnia i harmonogram przypomnień
+- powiadomienia o gotowości, synchronizacji, treningu, krokach i śnie
+- tryb ciszy, centrum komunikatów i szybkie reakcje
+- service worker obsługujący powiadomienia systemowe
+
+## 3.5.0 — ETAP M
+
+- gotowość dzienna 0–100 i poziom wiarygodności
+- Trener adaptacyjny 2.0 z wyjaśnieniem wyniku
+- adaptacyjne ciężary, serie i czas cardio
+- opcjonalny check-in regeneracji
+- trend 7 vs 30 dni i historia gotowości
+
 ## 3.4.0 — ETAP L
 
 - raport 7 dni i porównanie z poprzednim tygodniem
@@ -34,10 +49,3 @@
 - dodano brakujące ikony PWA,
 - naprawiono instalowanie i odświeżanie Service Workera,
 - usunięto pliki Gradle niezwiązane z PWA.
-
-
-## 3.5.0 — ETAP M
-
-- Trener adaptacyjny 2.0 i gotowość dzienna.
-- Poranny check-in i adaptacja intensywności treningu.
-- Trend 7/30 dni oraz historia gotowości.

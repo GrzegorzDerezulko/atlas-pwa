@@ -1,0 +1,32 @@
+ATLAS PWA 3.6.0 — ETAP N — raport testów
+Data testu: 2026-08-06
+
+1. Składnia JavaScript głównego skryptu: OK (node --check)
+2. Składnia modułu Firebase: OK (node --check)
+3. Składnia service-worker.js: OK (node --check)
+4. Struktura HTML i unikalność identyfikatorów: OK
+5. Migracja danych ze starszej wersji bez sekcji notifications: OK
+   - utworzono domyślny harmonogram
+   - zachowano dotychczasowe dane użytkownika
+6. Widok desktopowy 1440 × 1000: OK
+7. Widok mobilny 390 × 844: OK
+8. Plan dnia: OK
+   - 5 podstawowych zadań
+   - gotowość, synchronizacja, aktywność, kroki i sen
+   - opcjonalny alarm kilku słabszych dni
+9. Ustawienia harmonogramu: OK
+   - zapis godzin
+   - cel kroków
+   - tryb ciszy
+   - wybór rodzajów komunikatów
+10. Szybkie reakcje: OK
+    - wykonane
+    - odpoczywam
+    - przypomnij za 30 minut
+11. Centrum powiadomień i licznik nowych komunikatów: OK
+12. Powiadomienia przez service worker: składnia i komunikacja aplikacji sprawdzone
+13. Brak błędów JavaScript podczas testu interakcyjnego: OK
+14. Integralność archiwum ZIP: OK
+
+Ograniczenie techniczne:
+Bez osobnego serwera push statyczna PWA nie może zagwarantować uruchomienia powiadomienia o dokładnej godzinie po całkowitym zamknięciu aplikacji przez system telefonu. Plan, historia i zaległe przypomnienia są odświeżane po ponownym otwarciu ATLAS.

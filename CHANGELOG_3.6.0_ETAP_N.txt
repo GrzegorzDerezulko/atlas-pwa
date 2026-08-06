@@ -1,0 +1,15 @@
+ATLAS PWA 3.6.0 — ETAP N
+
+- nowa zakładka Plan dnia
+- inteligentny harmonogram: gotowość, synchronizacja, trening, kroki i sen
+- wykrywanie trzech słabszych dni z rzędu
+- przypomnienie o nieaktualnych danych zegarka
+- ustawiane godziny i cel kroków
+- tryb ciszy
+- centrum powiadomień z historią i licznikiem nowych komunikatów
+- szybkie reakcje: wykonane, odpoczywam, przypomnij za 30 minut
+- powiadomienia systemowe przez service worker
+- plan dnia na Dashboardzie
+- cache PWA atlas-pwa-3-6-0-stage-n
+
+Ograniczenie: bez serwera push przeglądarka nie gwarantuje dokładnej godziny powiadomienia po całkowitym zamknięciu aplikacji.
