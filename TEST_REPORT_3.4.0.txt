@@ -1,0 +1,20 @@
+ATLAS PWA 3.4.0 — RAPORT TESTÓW
+Data: 2026-08-06
+
+WYNIK: ZALICZONY
+
+1. Integralność archiwum ZIP: OK
+2. Poprawność manifest.webmanifest: OK
+3. Składnia głównego skryptu JavaScript (node --check): OK
+4. Składnia modułu Firebase (node --check): OK
+5. Brak zduplikowanych identyfikatorów HTML: OK
+6. Widok Raport 7 dni dostępny w menu komputerowym i mobilnym: OK
+7. Renderowanie 6 metryk i 7 wierszy dziennych: OK
+8. Test porównania 7 dni z poprzednimi 7 dniami na danych przykładowych: OK
+9. Wykres kroków oraz wykres snu: OK
+10. Ocena kompletności, poziomu zaufania i priorytetu tygodnia: OK
+11. Test responsywny 390 px: OK — brak poziomego przepełnienia strony
+12. Test uruchomieniowy w Chromium z danymi przykładowymi: OK — brak błędów JavaScript
+13. Aktualizacja wersji, manifestu i cache service workera do 3.4.0: OK
+
+Testowe dane przykładowe służyły wyłącznie do sprawdzenia obliczeń i nie są dołączone do aplikacji.

@@ -1,3 +1,12 @@
+# Historia zmian ATLAS PWA
+
+## 3.4.0 — ETAP L
+
+- raport 7 dni i porównanie z poprzednim tygodniem
+- analiza trendów zdrowotnych i aktywności
+- wykresy, tabela dzienna, kompletność danych i priorytet tygodnia
+- kopiowanie oraz drukowanie raportu
+
 # Changelog
 
 ## 3.3.0 — ETAP K: stabilizacja synchronizacji i historia

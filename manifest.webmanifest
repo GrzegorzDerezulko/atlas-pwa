@@ -1,8 +1,8 @@
 {
   "id": "./",
-  "name": "ATLAS PWA 3.3.0 — ETAP K",
+  "name": "ATLAS PWA 3.4.0 — ETAP L",
   "short_name": "ATLAS",
-  "description": "Plan transformacji z Dashboard LIVE, stabilną synchronizacją Firebase oraz historią danych zegarka z 30 dni.",
+  "description": "ATLAS z synchronizacją Firebase, historią zegarka oraz raportem tygodniowym i analizą trendów zdrowotnych.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

@@ -1,12 +1,17 @@
-ATLAS PWA 3.3.0 — aktualizacja przez GitHub + Cloudflare Pages
+ATLAS PWA 3.4.0 — ETAP L
 
-1. Rozpakuj paczkę.
-2. W repozytorium GrzegorzDerezulko/atlas-pwa wgraj wszystkie pliki i folder icons z paczki do katalogu głównego.
-3. Zatwierdź Commit changes na gałęzi main.
-4. Cloudflare Pages automatycznie rozpocznie nowe wdrożenie.
-5. Poczekaj, aż wdrożenie w Cloudflare otrzyma status Success.
-6. Na telefonie otwórz adres atlas-pwa-7gi.pages.dev w Chrome.
-7. Odśwież stronę, całkowicie zamknij zainstalowany ATLAS i uruchom ponownie.
-8. W zakładce Zegarek / Sync sprawdź tytuł: ATLAS PWA 3.3.0 — ETAP K.
+GDZIE WGRAĆ:
+GitHub → repozytorium atlas-pwa → gałąź main.
+Cloudflare pobierze zmianę automatycznie.
 
-Nie włączaj ponownie GitHub Pages. GitHub przechowuje kod, a aplikację publikuje Cloudflare Pages.
+JAK WGRAĆ:
+1. Rozpakuj ZIP.
+2. Otwórz folder ATLAS_PWA_3.4.0_ETAP_L.
+3. Zaznacz całą zawartość folderu.
+4. W GitHub wybierz Add file → Upload files.
+5. Zastąp istniejące pliki w głównym katalogu repozytorium.
+6. Kliknij Commit changes.
+7. Poczekaj na zielony status wdrożenia w Cloudflare Pages.
+
+Po wdrożeniu otwórz aplikację i sprawdź napis:
+PWA 3.4 • Raport tygodniowy

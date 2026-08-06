@@ -1,0 +1,19 @@
+ATLAS PWA 3.4.0 — ETAP L
+
+- pełny raport z ostatnich 7 dni
+- porównanie z poprzednimi 7 dniami
+- analiza trendów kroków, snu, aktywnych kalorii i tętna
+- liczba aktywności i zapisanych minut
+- zmiana masy oraz obwodu pasa
+- ocena kompletności i poziomu zaufania do trendu
+- wynik realizacji tygodnia 0–100
+- automatyczne wnioski: co działa, co poprawić i priorytet na kolejny tydzień
+- wykres porównawczy kroków i wykres snu
+- tabela dzień po dniu
+- wybór dowolnego końca tygodnia oraz przechodzenie do poprzednich tygodni
+- kopiowanie tekstowego podsumowania
+- drukowanie lub zapis raportu do PDF z przeglądarki
+- karta pełnego raportu dostępna z Dashboardu
+- aktualizacja cache PWA do atlas-pwa-3-4-0-stage-l
+
+Raport ma charakter orientacyjny i nie zastępuje porady medycznej.
