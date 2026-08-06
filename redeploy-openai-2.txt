@@ -1,0 +1,1 @@
+Ponowne wdrożenie po dodaniu OPENAI_API_KEY.
