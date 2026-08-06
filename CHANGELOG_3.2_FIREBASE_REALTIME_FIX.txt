@@ -1,0 +1,10 @@
+ATLAS PWA 3.2 – Firebase Realtime Fix
+
+- Usunięto orderBy('date') z nasłuchu daily. Dokumenty, które używają daty wyłącznie jako ID, nie są już pomijane.
+- Dodano obsługę kilku schematów Firestore: dokument bezpośredni, data/payload oraz tablice items/days/records.
+- Dodano normalizację kroków, aktywnych kalorii, snu i tętna.
+- Dodano obsługę kilku schematów aktywności: items/activities/records/workouts.
+- Brakujące tablice activities/items są zastępowane pustą tablicą.
+- Dodano diagnostykę UID, projektu Firebase, liczby dokumentów, rozpoznanych rekordów i źródła cache.
+- Dane z Firestore trafiają do wspólnego Core używanego przez Start, Historię, Trening i Analizę.
+- Zmieniono cache Service Workera na atlas-pwa-3-2-firebase-realtime-fix.

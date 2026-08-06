@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#0b1220"><meta name="description" content="ATLAS - dieta i dziennik transformacji sylwetki">
-<link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icons/icon-192.png"><title>ATLAS Core 3.1</title>
+<link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icons/icon-192.png"><title>ATLAS PWA 3.2 – Firebase Realtime Fix</title>
 <style>
 :root{--bg:#07101d;--panel:#0d1828;--panel2:#111f33;--text:#f5f7fb;--muted:#9fb0c6;--accent:#63d19e;--accent2:#5aa8ff;--danger:#ff6b6b;--border:#22344c;--shadow:0 12px 30px rgba(0,0,0,.28)}
 *{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}body{min-height:100vh}.app{display:grid;grid-template-columns:250px 1fr;min-height:100vh}.sidebar{background:#081321;border-right:1px solid var(--border);padding:24px 16px;position:sticky;top:0;height:100vh}.brand{display:flex;gap:12px;align-items:center;margin-bottom:28px}.logo{width:44px;height:44px;border-radius:14px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;font-size:24px;box-shadow:var(--shadow)}.brand h1{font-size:20px;margin:0}.brand small{color:var(--muted)}.nav{display:grid;gap:8px}.nav button{border:0;background:transparent;color:var(--muted);padding:13px 14px;border-radius:12px;text-align:left;font-size:15px;cursor:pointer}.nav button.active,.nav button:hover{background:var(--panel2);color:var(--text)}.content{padding:28px;max-width:1200px;width:100%;margin:0 auto}.topbar{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:24px}.topbar h2{margin:0;font-size:28px}.status{color:var(--muted);font-size:14px}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.card{background:linear-gradient(180deg,var(--panel),#0a1524);border:1px solid var(--border);border-radius:18px;padding:18px;box-shadow:var(--shadow);margin-bottom:16px}.metric .label{color:var(--muted);font-size:13px}.metric .value{font-size:28px;font-weight:800;margin-top:8px}.metric .sub{font-size:12px;color:var(--muted);margin-top:6px}.wide{grid-column:span 2}.full{grid-column:1/-1}.progress{height:10px;background:#18283c;border-radius:999px;overflow:hidden;margin-top:12px}.progress span{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));width:0;transition:.25s}.section-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}.section-title h3{margin:0;font-size:18px}.quick{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.quick button,.primary,.secondary{border:0;border-radius:12px;padding:12px 14px;font-weight:700;cursor:pointer}.quick button,.primary{background:var(--accent);color:#052015}.secondary{background:#16263b;color:var(--text);border:1px solid var(--border)}.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.field{display:grid;gap:6px}.field label{font-size:13px;color:var(--muted)}.field input,.field select{width:100%;background:#081421;color:var(--text);border:1px solid var(--border);border-radius:10px;padding:11px 12px;font-size:15px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.hidden{display:none!important}.empty{color:var(--muted);padding:20px 0}.mobilebar{display:none}.notice{padding:12px 14px;border-radius:12px;background:#10243a;border:1px solid #244766;color:#cde6ff;margin-bottom:16px}.toast{position:fixed;right:18px;bottom:18px;background:#12243a;color:#fff;padding:12px 16px;border:1px solid var(--border);border-radius:12px;opacity:0;transform:translateY(12px);transition:.25s;pointer-events:none;z-index:99}.toast.show{opacity:1;transform:none}
@@ -109,12 +109,12 @@
 <article class="card full"><div class="section-title"><h3>Historia zdjęć</h3><span id="photoCount">0 zestawów</span></div><div id="photoGallery" class="photo-gallery"></div></article></div></section>
 <section id="history" class="view hidden"><div class="topbar"><h2>Historia</h2><div class="status" id="historyCount"></div></div><div class="card"><div id="historyList" class="empty">Brak wpisów.</div></div></section>
 <section id="xiaomi" class="view hidden"><div class="topbar"><div><h2>Zegarek / ATLAS Cloud</h2><div class="status">Xiaomi Watch S3 → Health Connect → Firebase → Dashboard LIVE</div></div></div>
-<div class="card"><div class="section-title"><h3>ATLAS Cloud Sync 2.0 – Automatyczna synchronizacja</h3><span class="status-chip" id="cloudBadge">ROZŁĄCZONY</span></div>
+<div class="card"><div class="section-title"><h3>ATLAS PWA 3.2 – Firebase Realtime Fix</h3><span class="status-chip" id="cloudBadge">ROZŁĄCZONY</span></div>
 <div class="notice"><b>Pierwsze uruchomienie:</b> w aplikacji Android ATLAS Sync 2.4 połącz obecnego użytkownika anonimowego z adresem e-mail i hasłem. Następnie zaloguj się tutaj tym samym kontem. Dzięki temu Android i PWA używają tego samego UID i aktualnych reguł Firestore.</div>
 <div class="form-grid"><div class="field"><label>E-mail konta ATLAS</label><input id="cloudEmail" type="email" autocomplete="email" placeholder="np. atlas@twojadomena.pl"></div><div class="field"><label>Hasło</label><input id="cloudPassword" type="password" autocomplete="current-password" minlength="6" placeholder="minimum 6 znaków"></div></div>
 <div class="actions"><button class="primary" id="cloudLogin">Zaloguj i uruchom LIVE</button><button class="secondary" id="cloudLogout">Wyloguj</button></div>
 <div id="cloudStatus" class="import-result"><div class="empty">Oczekiwanie na logowanie do Firebase.</div></div>
-<div class="integration-grid" style="margin-top:14px"><div class="metric"><div class="label">Ostatnia aktualizacja</div><div class="value" id="cloudUpdated">—</div><div class="sub">Firestore realtime</div></div><div class="metric"><div class="label">Dokumenty dzienne</div><div class="value" id="cloudDays">0</div><div class="sub">users/UID/daily</div></div><div class="metric"><div class="label">Aktywności</div><div class="value" id="cloudActivities">0</div><div class="sub">users/UID/activities</div></div></div></div>
+<div class="integration-grid" style="margin-top:14px"><div class="metric"><div class="label">Ostatnia aktualizacja</div><div class="value" id="cloudUpdated">—</div><div class="sub">Firestore realtime</div></div><div class="metric"><div class="label">Dokumenty dzienne</div><div class="value" id="cloudDays">0</div><div class="sub">users/UID/daily</div></div><div class="metric"><div class="label">Aktywności</div><div class="value" id="cloudActivities">0</div><div class="sub">users/UID/activities</div></div></div><div id="cloudDiagnostics" class="code-note" style="margin-top:14px">Diagnostyka Firebase: oczekiwanie na logowanie.</div></div>
 <div class="warning"><b>Ważne:</b> PWA nie czyta Health Connect bezpośrednio. Dane są odbierane z Twojego chronionego dokumentu Firestore po zalogowaniu tym samym kontem Firebase co aplikacja Android. Import JSON pozostaje wyłącznie jako kopia awaryjna — na co dzień nie musisz go używać.</div>
 <div class="card"><div class="section-title"><h3>Stan integracji</h3><span id="xiaomiLastSync">Nigdy nie importowano</span></div><div class="integration-grid"><div class="integration-status"><span class="dot ok"></span><div><b>Model</b><div class="small">Xiaomi Watch S3</div></div></div><div class="integration-status"><span class="dot ok"></span><div><b>Źródło</b><div class="small">Mi Fitness</div></div></div><div class="integration-status"><span class="dot" id="xiaomiSyncDot"></span><div><b>Import</b><div class="small" id="xiaomiSyncState">Oczekuje na plik</div></div></div></div></div>
 <div class="card"><div class="section-title"><h3>1. Eksport z Mi Fitness</h3></div><ol><li>Wejdź na konto Xiaomi i wybierz: <b>Prywatność → Zarządzaj swoimi danymi → Mi Fitness → Pobierz</b>.</li><li>Po otrzymaniu archiwum rozpakuj je na telefonie lub komputerze.</li><li>Wybierz poniżej plik <b>CSV</b> albo <b>JSON</b> zawierający dane dzienne lub aktywności.</li></ol><div class="notice">Eksport Xiaomi może zawierać kilka plików. Najpierw wybierz plik z danymi dziennymi, krokami, snem lub aktywnością. Importer rozpoznaje popularne nazwy kolumn po polsku i angielsku.</div></div>
@@ -490,31 +490,91 @@ q('exportData').onclick=()=>{const blob=new Blob([JSON.stringify(state,null,2)],
 q('saveMeasurement').onclick=()=>{const m={date:q('measurementDate').value,weight:q('measurementWeight').value,waist:q('measurementWaist').value,chest:q('measurementChest').value,arm:q('measurementArm').value,thigh:q('measurementThigh').value};if(!m.date)return toast('Wybierz datę');if(!isSunday(m.date))return toast('Pełne pomiary zapisujemy w niedzielę');if(!m.weight&&!m.waist)return toast('Wpisz przynajmniej wagę lub pas');const i=state.measurements.findIndex(x=>x.date===m.date);if(i>=0)state.measurements[i]=m;else state.measurements.push(m);const daily={date:m.date,weight:m.weight,waist:m.waist};upsertCoreDay(m.date,{...(coreDay(m.date)||{}),...daily});save();toast('Pomiar niedzielny zapisany')};
 q('clearMeasurement').onclick=()=>['measurementWeight','measurementWaist','measurementChest','measurementArm','measurementThigh'].forEach(id=>q(id).value='');
 
-window.atlasCloudApplyDays=function(days){
- state.core=state.core||{version:4.0,days:{}};state.core.version=4.0;state.core.days=state.core.days||{};
- for(const raw of (days||[])){
-  const ds=dateOnly(raw.date||raw.id);if(!ds)continue;
-  const old=state.core.days[ds]||{date:ds,activities:[]};
-  const patch={...old,date:ds,activities:[...(old.activities||[])]};
-  const assign=(k,v)=>{if(v!==undefined&&v!==null&&v!=='')patch[k]=v};
-  assign('steps',raw.steps);assign('watchCalories',raw.activeCalories??raw.watchCalories);
-  assign('sleepMinutes',raw.sleepMinutes);if(Number.isFinite(Number(raw.sleepMinutes)))patch.sleep=Number((Number(raw.sleepMinutes)/60).toFixed(2));
-  for(const k of ['heartRate','heartRateAvg','heartRateMin','heartRateMax','restingHeartRate','distance'])assign(k,raw[k]);
-  assign('sleepStart',raw.sleepStart);assign('sleepEnd',raw.sleepEnd);
-  patch.cloudSyncAt=new Date().toISOString();patch.cloudSource='ATLAS Cloud / Firestore';
-  state.core.days[ds]=patch;
+function cloudScalar(value){
+ if(value===undefined||value===null||value==='')return null;
+ if(typeof value==='object'){
+  if(typeof value.toDate==='function')return value.toDate().toISOString();
+  if(Number.isFinite(Number(value.seconds)))return new Date(Number(value.seconds)*1000).toISOString();
+  if('value' in value)return cloudScalar(value.value);
+  if('total' in value)return cloudScalar(value.total);
+  if('count' in value)return cloudScalar(value.count);
+  if('kcal' in value)return cloudScalar(value.kcal);
+  if('minutes' in value)return cloudScalar(value.minutes);
  }
- state.xiaomi={...(state.xiaomi||{}),lastSync:new Date().toISOString(),lastFile:'ATLAS Cloud Realtime',records:(days||[]).length};
- syncLegacyFromCore();localStorage.setItem(KEY,JSON.stringify(state));render();
+ return value;
+}
+function cloudNumber(value){const v=cloudScalar(value),n=Number(v);return Number.isFinite(n)?n:null}
+function cloudDate(value,fallback=''){
+ const v=cloudScalar(value)||fallback;if(!v)return '';
+ const text=String(v);const m=text.match(/\d{4}-\d{2}-\d{2}/);if(m)return m[0];
+ const d=new Date(v);return Number.isNaN(d.getTime())?'':d.toISOString().slice(0,10);
+}
+function unwrapCloudObject(raw){
+ if(!raw||typeof raw!=='object')return {};
+ const nested=['data','payload','value','day','record'].find(k=>raw[k]&&typeof raw[k]==='object'&&!Array.isArray(raw[k]));
+ return nested?{...raw,...raw[nested]}:{...raw};
+}
+function expandCloudRows(documents,kind){
+ const out=[];
+ for(const doc of (documents||[])){
+  const raw=unwrapCloudObject(doc||{});
+  const arrays=kind==='daily'?['items','days','records','daily']:['items','activities','records','workouts'];
+  const key=arrays.find(k=>Array.isArray(raw[k]));
+  if(key){for(const item of raw[key])out.push({...unwrapCloudObject(item),_docId:raw.id||raw._docId||'',_container:key});}
+  else out.push({...raw,_docId:raw.id||raw._docId||''});
+ }
+ return out;
+}
+function normalizeCloudDay(raw){
+ const r=unwrapCloudObject(raw);const ds=cloudDate(r.date||r.day||r.localDate||r.recordDate||r.startDate||r._docId);
+ if(!ds)return null;
+ const sleepMinutes=cloudNumber(r.sleepMinutes??r.sleep?.minutes??r.sleep?.durationMinutes??r.sleepDurationMinutes);
+ return {date:ds,
+  steps:cloudNumber(r.steps??r.stepCount??r.stepsTotal??r.activity?.steps),
+  activeCalories:cloudNumber(r.activeCalories??r.activeKcal??r.caloriesActive??r.watchCalories??r.calories?.active),
+  sleepMinutes,
+  sleepStart:cloudScalar(r.sleepStart??r.sleep?.start),sleepEnd:cloudScalar(r.sleepEnd??r.sleep?.end),
+  heartRate:cloudNumber(r.heartRate??r.lastHeartRate??r.heart?.last),
+  heartRateAvg:cloudNumber(r.heartRateAvg??r.avgHeartRate??r.heart?.average),
+  heartRateMin:cloudNumber(r.heartRateMin??r.minHeartRate??r.heart?.minimum),
+  heartRateMax:cloudNumber(r.heartRateMax??r.maxHeartRate??r.heart?.maximum),
+  restingHeartRate:cloudNumber(r.restingHeartRate??r.heart?.resting),
+  distance:cloudNumber(r.distance??r.distanceKm??r.activity?.distance),
+  syncedAt:cloudScalar(r.syncedAt??r.updatedAt??r.timestamp)
+ };
+}
+function normalizeCloudActivity(raw){
+ const r=unwrapCloudObject(raw);const start=cloudScalar(r.start??r.startTime??r.startedAt),end=cloudScalar(r.end??r.endTime??r.endedAt);
+ const ds=cloudDate(r.date||r.day||start||r._docId);if(!ds)return null;
+ return {id:String(r.id||r.syncId||r._docId||start||Date.now()),syncId:String(r.syncId||r.id||r._docId||start||''),date:ds,
+  name:r.name||r.atlasName||r.title||r.typeName||'Aktywność z zegarka',watchMode:r.watchMode||r.mode||r.type||'',
+  start:start||'',end:end||'',durationMinutes:cloudNumber(r.durationMinutes??r.duration??r.minutes)||0,
+  calories:cloudNumber(r.calories??r.activeCalories??r.kcal)||0,avgHeartRate:cloudNumber(r.avgHeartRate??r.heartRateAvg)||'',maxHeartRate:cloudNumber(r.maxHeartRate??r.heartRateMax)||'',
+  additional:Boolean(r.additional),source:r.source||'ATLAS Cloud / Firestore'};
+}
+window.atlasCloudApplyDays=function(documents){
+ const rows=expandCloudRows(documents,'daily').map(normalizeCloudDay).filter(Boolean);
+ state.core=state.core||{version:4.0,days:{}};state.core.version=4.0;state.core.days=state.core.days||{};
+ for(const raw of rows){
+  const ds=raw.date;const old=state.core.days[ds]||{date:ds,activities:[]};const patch={...old,date:ds,activities:Array.isArray(old.activities)?[...old.activities]:[]};
+  const assign=(k,v)=>{if(v!==undefined&&v!==null&&v!=='')patch[k]=v};
+  assign('steps',raw.steps);assign('watchCalories',raw.activeCalories);assign('sleepMinutes',raw.sleepMinutes);
+  if(Number.isFinite(Number(raw.sleepMinutes)))patch.sleep=Number((Number(raw.sleepMinutes)/60).toFixed(2));
+  for(const k of ['heartRate','heartRateAvg','heartRateMin','heartRateMax','restingHeartRate','distance','sleepStart','sleepEnd'])assign(k,raw[k]);
+  patch.cloudSyncAt=raw.syncedAt||new Date().toISOString();patch.cloudSource='ATLAS Cloud / Firestore';state.core.days[ds]=patch;
+ }
+ state.xiaomi={...(state.xiaomi||{}),lastSync:new Date().toISOString(),lastFile:'ATLAS Cloud Realtime',records:rows.length};
+ syncLegacyFromCore();localStorage.setItem(KEY,JSON.stringify(state));render();return rows.length;
 };
-window.atlasCloudApplyActivities=function(items){
- const grouped={};for(const item of (items||[])){const ds=dateOnly(item.date||String(item.start||'').slice(0,10));if(!ds)continue;(grouped[ds]??=[]).push({...item,date:ds,cloudImported:true});}
+window.atlasCloudApplyActivities=function(documents){
+ const items=expandCloudRows(documents,'activities').map(normalizeCloudActivity).filter(Boolean),grouped={};
+ for(const item of items)(grouped[item.date]??=[]).push({...item,cloudImported:true});
  for(const [ds,acts] of Object.entries(grouped)){
-  const d=state.core.days[ds]||{date:ds,activities:[]};const manual=(d.activities||[]).filter(a=>!a.cloudImported);
+  const d=state.core.days[ds]||{date:ds,activities:[]};const existing=Array.isArray(d.activities)?d.activities:[];const manual=existing.filter(a=>!a.cloudImported);
   const map=new Map();for(const a of [...manual,...acts])map.set(String(a.syncId||a.id||a.start||JSON.stringify(a)),a);
   d.activities=[...map.values()];state.core.days[ds]=d;
  }
- syncLegacyFromCore();localStorage.setItem(KEY,JSON.stringify(state));render();
+ syncLegacyFromCore();localStorage.setItem(KEY,JSON.stringify(state));render();return items.length;
 };
 window.atlasCloudToast=function(message){toast(message)};
 
@@ -523,7 +583,7 @@ function setOnline(){q('onlineState').textContent=navigator.onLine?'● Online':
 <script type="module">
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/12.16.0/firebase-app.js';
 import { getAuth, setPersistence, browserLocalPersistence, onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'https://www.gstatic.com/firebasejs/12.16.0/firebase-auth.js';
-import { getFirestore, collection, onSnapshot, query, orderBy } from 'https://www.gstatic.com/firebasejs/12.16.0/firebase-firestore.js';
+import { getFirestore, collection, onSnapshot } from 'https://www.gstatic.com/firebasejs/12.16.0/firebase-firestore.js';
 
 const firebaseConfig={
  apiKey:'AIzaSyA9ELn7BjyHSAXr_Q5swcBPcoMlTMj3rXU',
@@ -536,10 +596,20 @@ const app=initializeApp(firebaseConfig),auth=getAuth(app),db=getFirestore(app);
 const el=id=>document.getElementById(id);let stops=[];
 function setCloud(status,details,ok=false){el('cloudStatus').innerHTML=`<div class="${ok?'notice':'warning'}"><b>${status}</b><br>${details}</div>`;el('cloudBadge').textContent=ok?'LIVE':'ROZŁĄCZONY';el('cloudBadge').style.background=ok?'#123c32':'#3b2a12';}
 function detach(){for(const stop of stops)try{stop()}catch{}stops=[];}
-function listen(user){detach();setCloud('Połączono z ATLAS Cloud',`UID: ${user.uid}<br>Nasłuchiwanie danych w czasie rzeczywistym…`,true);
- const dailyQ=query(collection(db,'users',user.uid,'daily'),orderBy('date','asc'));
- stops.push(onSnapshot(dailyQ,snap=>{const days=snap.docs.map(d=>({id:d.id,...d.data()}));window.atlasCloudApplyDays(days);el('cloudDays').textContent=String(days.length);el('cloudUpdated').textContent=new Date().toLocaleTimeString('pl-PL');setCloud('Dashboard LIVE aktywny',`Odebrano ${days.length} dokumentów dziennych. Zmiany z Androida pojawią się automatycznie.`,true)},err=>setCloud('Błąd odczytu danych dziennych',err.message)));
- stops.push(onSnapshot(collection(db,'users',user.uid,'activities'),snap=>{const acts=snap.docs.map(d=>({id:d.id,...d.data()}));window.atlasCloudApplyActivities(acts);el('cloudActivities').textContent=String(acts.length);el('cloudUpdated').textContent=new Date().toLocaleTimeString('pl-PL')},err=>setCloud('Błąd odczytu aktywności',err.message)));
+function listen(user){detach();setCloud('Połączono z ATLAS Cloud',`UID: ${user.uid}<br>Projekt: ${firebaseConfig.projectId}<br>Nasłuchiwanie danych w czasie rzeczywistym…`,true);
+ const diag=(text)=>{const node=el('cloudDiagnostics');if(node)node.textContent=text};
+ // Celowo bez orderBy('date'): Android może używać daty jako ID dokumentu i nie zapisywać pola date. Firestore wykluczał wtedy dokument z wyniku.
+ stops.push(onSnapshot(collection(db,'users',user.uid,'daily'),snap=>{
+  const docs=snap.docs.map(d=>({id:d.id,_docId:d.id,...d.data()}));const normalized=window.atlasCloudApplyDays(docs);
+  el('cloudDays').textContent=String(normalized);el('cloudUpdated').textContent=new Date().toLocaleTimeString('pl-PL');
+  diag(`Firebase OK | UID: ${user.uid} | daily: ${snap.size} dokumentów / ${normalized} dni | activities: ${el('cloudActivities').textContent} | cache: ${snap.metadata.fromCache?'lokalny':'serwer'}`);
+  setCloud('Dashboard LIVE aktywny',`Odebrano ${snap.size} dokumentów dziennych i rozpoznano ${normalized} dni.`,true);
+ },err=>{diag(`Błąd daily: ${err.code||''} ${err.message}`);setCloud('Błąd odczytu danych dziennych',`${err.code||''} ${err.message}`)}));
+ stops.push(onSnapshot(collection(db,'users',user.uid,'activities'),snap=>{
+  const docs=snap.docs.map(d=>({id:d.id,_docId:d.id,...d.data()}));const normalized=window.atlasCloudApplyActivities(docs);
+  el('cloudActivities').textContent=String(normalized);el('cloudUpdated').textContent=new Date().toLocaleTimeString('pl-PL');
+  diag(`Firebase OK | UID: ${user.uid} | daily: ${el('cloudDays').textContent} | activities: ${snap.size} dokumentów / ${normalized} aktywności | cache: ${snap.metadata.fromCache?'lokalny':'serwer'}`);
+ },err=>{diag(`Błąd activities: ${err.code||''} ${err.message}`);setCloud('Błąd odczytu aktywności',`${err.code||''} ${err.message}`)}));
 }
 await setPersistence(auth,browserLocalPersistence);
 onAuthStateChanged(auth,user=>{if(user){el('cloudEmail').value=user.email||'';listen(user)}else{detach();setCloud('Nie zalogowano','W aplikacji Android połącz konto anonimowe z e-mailem, a następnie zaloguj się tutaj tym samym e-mailem i hasłem.')}});
