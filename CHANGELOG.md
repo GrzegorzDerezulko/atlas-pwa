@@ -1,3 +1,9 @@
+## 3.8.3 FINAL
+- Dashboard: metryki Kalorie, Białko, Woda, Kroki i Spalone kcal przeniesione na górę.
+- Następny posiłek jest bezpośrednio pod metrykami, a następnie karta Projekt ATLAS.
+- Trening: automatyczny zapis roboczy po każdej zmianie wyniku serii; dane wracają po przejściu między ekranami/odświeżeniu.
+- Zapis aktywności finalizuje trening i usuwa szkic.
+
 # Historia zmian ATLAS PWA
 
 ## 3.8.1 — WERSJA GOTOWA BEZ CZATU AI
