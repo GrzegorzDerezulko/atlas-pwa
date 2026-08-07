@@ -1,0 +1,6 @@
+ATLAS PWA 3.8.2
+
+Zmiany:
+- Dashboard: dodano kartę „Spalone kcal” pokazującą aktywne kalorie z danych zegarka (watchCalories / activeCalories).
+- Dashboard: poprawiono przycisk „Zobacz składniki i przepis” — otwiera właściwy dzień, przewija do konkretnego posiłku i rozwija składniki oraz przygotowanie.
+- Zaktualizowano wersję aplikacji i cache Service Workera do 3.8.2.
