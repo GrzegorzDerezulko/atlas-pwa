@@ -1,18 +1,18 @@
 # Historia zmian ATLAS PWA
 
-## 3.8.0 — ETAP P
+## 3.8.1 — WERSJA GOTOWA BEZ CZATU AI
 
-- pełny czat AI przez Cloudflare Pages Function
-- bezpieczne uwierzytelnienie Firebase i sekret OpenAI poza kodem klienta
-- analiza danych ATLAS i zatwierdzane propozycje zmian
-- opcjonalna synchronizacja historii rozmów przez Firestore
-- lokalny tryb awaryjny
+- całkowicie usunięto chmurowy i lokalny czat AI
+- usunięto Cloudflare Pages Function oraz zależność od płatnego API
+- usunięto menu, dashboard i pamięć historii rozmów
+- zachowano plan adaptacyjny, gotowość, raporty, powiadomienia i synchronizację zegarka
+- odświeżono manifest, cache PWA i instrukcję wdrożenia
 
 ## 3.7.0 — ETAP O
 
 - adaptacyjny plan tygodnia zależny od gotowości i postępów
 - automatyczne ograniczenie ciężkiego treningu przy słabej regeneracji
-- lokalny czat z potwierdzaniem zmian treningu i diety
+- ręczna zmiana aktywności oraz bezpieczne nadpisania planu
 - ręczne nadpisania planu, ćwiczeń i posiłków
 
 ## 3.6.0 — ETAP N

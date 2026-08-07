@@ -1,30 +1,25 @@
-# ATLAS PWA 3.8.0 — ETAP P
+# ATLAS PWA 3.8.1 — WERSJA GOTOWA BEZ CZATU AI
 
-## Trener AI w chmurze
+Ta wersja usuwa całkowicie płatny czat AI oraz lokalny czat poleceń. Można ją traktować jako stabilną, gotową wersję osobistej aplikacji ATLAS.
 
-ETAP P dodaje pełny czat dostępny w zakładce **Trener AI**. Model otrzymuje wyłącznie zwięzłe podsumowanie danych ATLAS i może:
+Pozostają wszystkie główne funkcje ATLAS:
 
-- wyjaśnić wynik gotowości,
-- omówić tydzień treningowy,
-- zaproponować lżejszy trening lub regenerację,
-- przygotować zmianę dnia treningowego,
-- zamienić ćwiczenie,
-- zaproponować zmianę kalorii, białka lub posiłku.
-
-Zmiany nigdy nie są stosowane automatycznie. Najpierw pojawia się karta **Propozycja zmiany — wymaga potwierdzenia**.
-
-## Uruchomienie chmury
-
-Po wgraniu plików do GitHuba wykonaj instrukcję z `CLOUDFLARE_AI_SETUP_PL.md`. Bez sekretu OpenAI czat pozostanie w dotychczasowym trybie lokalnym.
-
-## Historia między urządzeniami
-
-Opcjonalna synchronizacja przez Firebase wymaga reguły z `FIRESTORE_RULES_ETAP_P.txt`. Brak tej reguły nie blokuje rozmowy AI.
+- automatyczna synchronizacja zegarka przez Firebase,
+- historia 7 / 30 / 90 dni,
+- raport tygodniowy i trendy,
+- gotowość dzienna i Trener adaptacyjny 2.0,
+- plan dnia i powiadomienia,
+- adaptacyjny plan treningowy,
+- ręczna zmiana aktywności w Planie adaptacyjnym,
+- dieta, zakupy, kuchnia, treningi i postępy.
 
 ## Publikacja
 
 1. Rozpakuj ZIP.
-2. Wgraj zawartość folderu `ATLAS_PWA_3.8.0_ETAP_P` do głównego katalogu repozytorium `atlas-pwa`.
-3. Zatwierdź zmiany na gałęzi `main`.
-4. Cloudflare Pages opublikuje PWA i katalog `functions`.
-5. Dodaj sekret `OPENAI_API_KEY` w Cloudflare i wykonaj ponowne wdrożenie.
+2. Wgraj zawartość folderu `ATLAS_PWA_3.8.1_FINAL_BEZ_CZATU_AI` do głównego katalogu repozytorium `atlas-pwa`.
+3. Zastąp istniejące pliki.
+4. Usuń z repozytorium folder `functions`, jeśli nadal tam występuje.
+5. Zatwierdź zmiany na gałęzi `main`.
+6. Cloudflare Pages opublikuje wersję automatycznie.
+
+Po wdrożeniu możesz usunąć sekret `OPENAI_API_KEY` z ustawień Cloudflare, ponieważ aplikacja już go nie wykorzystuje.

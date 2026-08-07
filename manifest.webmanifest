@@ -1,8 +1,8 @@
 {
   "id": "./",
-  "name": "ATLAS PWA 3.8.0 — ETAP P",
+  "name": "ATLAS PWA 3.8.1 — Wersja gotowa",
   "short_name": "ATLAS",
-  "description": "ATLAS z bezpiecznym Trenerem AI w chmurze, analizą gotowości oraz zatwierdzanymi zmianami treningu i diety.",
+  "description": "ATLAS do synchronizacji danych zegarka, raportów, gotowości, planu dnia i adaptacyjnego planu treningowego.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
@@ -30,19 +30,6 @@
     }
   ],
   "shortcuts": [
-    {
-      "name": "Trener AI",
-      "short_name": "AI",
-      "description": "Otwórz pełny czat z trenerem ATLAS",
-      "url": "./#ai",
-      "icons": [
-        {
-          "src": "icons/icon-192.png",
-          "sizes": "192x192",
-          "type": "image/png"
-        }
-      ]
-    },
     {
       "name": "Plan adaptacyjny",
       "short_name": "Adaptacja",

@@ -1,0 +1,23 @@
+ATLAS PWA 3.8.1 — WERSJA GOTOWA BEZ CZATU AI
+Raport walidacji
+
+Wynik: ZALICZONO
+
+Sprawdzone elementy:
+- składnia głównego JavaScript: poprawna (node --check)
+- składnia modułu Firebase: poprawna (node --check)
+- składnia service workera: poprawna (node --check)
+- manifest.webmanifest: poprawny JSON
+- brak zakładki i sekcji Trener AI
+- brak lokalnego czatu w Planie adaptacyjnym
+- brak endpointu /api/ai i folderu functions w paczce
+- Plan adaptacyjny: widok otwiera się poprawnie
+- Plan dnia: widok otwiera się poprawnie
+- Trener adaptacyjny 2.0: widok otwiera się poprawnie
+- wspólna ścieżka odświeżania powiadomień: brak błędów JavaScript
+- test mobilny 390 x 844: poprawny
+- błędy JavaScript podczas testu interfejsu: 0
+
+Zakres:
+- czat chmurowy i lokalny został całkowicie usunięty;
+- pozostałe moduły zdrowotne, treningowe, dietetyczne i synchronizacyjne pozostały aktywne.

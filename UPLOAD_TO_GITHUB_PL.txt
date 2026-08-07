@@ -1,13 +1,10 @@
-ATLAS PWA 3.8.0 — ETAP P
+ATLAS PWA 3.8.1 — WERSJA GOTOWA BEZ CZATU AI
 
-1. Rozpakuj Projekt_ATLAS_PWA_3.8.0_ETAP_P.zip.
-2. Otwórz folder ATLAS_PWA_3.8.0_ETAP_P.
-3. Zaznacz CAŁĄ zawartość, łącznie z folderem functions.
-4. GitHub → atlas-pwa → Add file → Upload files.
-5. Zastąp istniejące pliki w głównym katalogu.
-6. Kliknij Commit changes na gałęzi main.
-7. Poczekaj na zielony status wdrożenia Cloudflare.
-8. Dodaj sekret OPENAI_API_KEY zgodnie z CLOUDFLARE_AI_SETUP_PL.md.
-9. Uruchom nowe wdrożenie Cloudflare.
-
-Po wdrożeniu sprawdź napis: PWA 3.8 • Trener AI w chmurze.
+1. Rozpakuj ZIP.
+2. Otwórz folder ATLAS_PWA_3.8.1_FINAL_BEZ_CZATU_AI.
+3. Wgraj jego ZAWARTOŚĆ do głównego katalogu repozytorium atlas-pwa.
+4. Zastąp istniejące pliki.
+5. W GitHubie usuń folder functions, jeżeli nadal istnieje.
+6. Commit bezpośrednio do gałęzi main.
+7. Poczekaj na zielone wdrożenie Production w Cloudflare Pages.
+8. W Cloudflare usuń sekret OPENAI_API_KEY — nie jest już potrzebny.

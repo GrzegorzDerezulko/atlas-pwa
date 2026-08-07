@@ -6,10 +6,7 @@ ATLAS PWA 3.7.0 — ETAP O
 - lżejsza objętość przy kilku słabszych dniach lub spadku wykonania
 - analiza realizacji 14 dni i progresu ćwiczeń
 - ręczne zmiany aktywności na konkretny dzień
-- trwałe podmiany ćwiczeń
-- lokalny czat do zmian treningu, kalorii, białka i posiłków
-- każda zmiana z czatu wymaga potwierdzenia
+- trwałe podmiany ćwiczeń i posiłków
 - lista zmian i przywracanie planu bazowego
-- cache PWA atlas-pwa-3-7-0-stage-o
 
-Ważne: czat w ETAPIE O jest lokalnym asystentem poleceń i działa offline. Pełna swobodna rozmowa z modelem AI wymaga bezpiecznego backendu (np. Cloudflare Worker) przechowującego sekret API. Klucza API nie należy wpisywać do publicznego pliku index.html.
+Uwaga: moduł rozmowy dostępny w historycznej wersji 3.7.0 został całkowicie usunięty w wersji 3.8.1.

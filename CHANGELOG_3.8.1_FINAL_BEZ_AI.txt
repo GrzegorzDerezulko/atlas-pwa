@@ -1,0 +1,8 @@
+ATLAS PWA 3.8.1 — WERSJA GOTOWA BEZ CZATU AI
+
+- usunięto zakładkę Trener AI,
+- usunięto czat lokalny z Planu adaptacyjnego,
+- usunięto endpoint /api/ai i folder functions,
+- usunięto synchronizację historii rozmów z Firebase,
+- usunięto konfigurację OPENAI_API_KEY z aplikacji,
+- pozostawiono wszystkie funkcje zdrowotne, treningowe, dietetyczne i synchronizacyjne.
