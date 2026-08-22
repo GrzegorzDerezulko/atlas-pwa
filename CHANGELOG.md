@@ -70,3 +70,11 @@
 - dodano brakujące ikony PWA,
 - naprawiono instalowanie i odświeżanie Service Workera,
 - usunięto pliki Gradle niezwiązane z PWA.
+
+
+## 3.8.4 — dieta dni 15–28 / Thermomix TM6
+- Dodano dni 15–28 jadłospisu.
+- Szczegółowe przepisy z gramaturą przypraw i ustawieniami TM6.
+- Dodano tapiokę.
+- Usunięto użycie samych białek jaj w nowych dniach.
+- Rozszerzono dietę, kuchnię i listę zakupów do 28 dni.
