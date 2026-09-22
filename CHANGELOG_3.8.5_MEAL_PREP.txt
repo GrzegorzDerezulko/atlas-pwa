@@ -1,0 +1,10 @@
+ATLAS PWA 3.8.5 — MEAL PREP 14 DNI
+
+- Nowy cel energetyczny: 2150 kcal/dzień.
+- Cel białka: około 180-190 g/dzień.
+- Dieta przebudowana na 14 dni w blokach 3+3+3+3+2.
+- Główne dania gotowane seryjnie na 2-3 dni.
+- Nocne owsianki przygotowywane w 3 pojemnikach na 3 dni.
+- Brak przepisów wymagających oddzielania białek od żółtek.
+- Lista zakupów, Kuchnia i wybór dnia ograniczone do nowego cyklu 14 dni.
+- Zachowany klucz danych atlas_stage1_v1, aby aktualizacja nie kasowała historii użytkownika.
